@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Rahayu Transport",
   },
   description:
-    "Layanan jasa sewa mobil dan kendaraan terpercaya. Pilihan armada lengkap, harga terjangkau, aman, dan nyaman untuk berbagai kebutuhan perjalanan Anda.",
+    "Rahayu Transport adalah solusi jasa sewa mobil dan kendaraan terpercaya dengan pilihan armada terlengkap, bersih, dan terawat. Kami hadir melayani perjalanan wisata, bisnis, hingga kebutuhan keluarga Anda di Bandung, Surabaya, Yogyakarta, dan Bali. Nikmati kenyamanan, keamanan, dan layanan profesional dengan harga kompetitif. Pesan sekarang untuk pengalaman perjalanan tanpa hambatan!",
   keywords: [
     "sewa mobil Bandung",
     "rental mobil Bandung",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rahayu Transport | Jasa Sewa Mobil Terpercaya",
     description:
-      "Layanan jasa sewa mobil dan kendaraan dengan armada terbaik. Pesan sekarang untuk kenyamanan perjalanan Anda!",
+      "Rahayu Transport adalah solusi jasa sewa mobil dan kendaraan terpercaya dengan pilihan armada terlengkap, bersih, dan terawat. Kami hadir melayani perjalanan wisata, bisnis, hingga kebutuhan keluarga Anda di Bandung, Surabaya, Yogyakarta, dan Bali. Nikmati kenyamanan, keamanan, dan layanan profesional dengan harga kompetitif. Pesan sekarang untuk pengalaman perjalanan tanpa hambatan!",
     url: "/",
     siteName: "Rahayu Transport",
     locale: "id_ID",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rahayu Transport - Jasa Sewa Kendaraan",
+        alt: "Rahayu Transport - Jasa Sewa Kendaraan di Bandung, Surabaya, Yogyakarta, dan Bali",
       },
     ],
   },

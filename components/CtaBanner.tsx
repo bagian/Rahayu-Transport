@@ -1,4 +1,4 @@
-import {MessageCircle, ArrowRight} from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,12 +6,9 @@ export default function CtaBanner() {
   return (
     <section className="py-24 max-w-[1440px] mx-auto px-6">
       <div className="relative  rounded-[50px] overflow-hidden shadow-2xl shadow-red-200 min-h-[500px] flex items-center bg-gradient-to-r from-rose-300 to-red-700">
-        {/* Dekorasi Background */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl z-0" />
         <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-black/10 rounded-full blur-3xl z-0" />
-
         <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-8 md:px-20 py-16">
-          {/* SISI MOBIL: Disembunyikan di Mobile & Tablet, Muncul di Desktop (lg) */}
           <div className="hidden lg:flex relative h-[450px] w-full items-center justify-center order-2 lg:order-1 lg:-translate-x-32 xl:-translate-x-48">
             <Image
               src="/img/car/platinum-white-pearl-mc-split.png"

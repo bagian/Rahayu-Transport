@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, EffectFade, Pagination} from "swiper/modules";
-import {ArrowUpRight, Play} from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { ArrowUpRight, Play } from "lucide-react";
 import Link from "next/link";
 
 import "swiper/css";
@@ -34,17 +34,17 @@ const slides = [
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[calc(100vh-80px)] md:h-[calc(80vh-80px)] min-h-[600px] overflow-hidden pb-10 pt-32 max-w-[2440px] mx-auto px-4">
+    <section className="relative w-full h-[calc(100vh-80px)] md:h-[calc(90vh-80px)] min-h-[600px] overflow-hidden pb-10 pt-32 max-w-[2440px] mx-auto px-4">
       <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Swiper
             modules={[Autoplay, EffectFade, Pagination]}
             effect="fade"
-            fadeEffect={{crossFade: true}}
-            autoplay={{delay: 6000, disableOnInteraction: false}}
+            fadeEffect={{ crossFade: true }}
+            autoplay={{ delay: 6000, disableOnInteraction: false }}
             loop={true}
             speed={1500}
-            pagination={{clickable: true}}
+            pagination={{ clickable: true }}
             className="w-full h-full hero-swiper"
           >
             {slides.map((slide) => (
@@ -70,7 +70,7 @@ export default function HeroSection() {
           }}
         ></div>
         <div className="relative z-20 h-full w-full flex flex-col justify-between px-8 md:px-16 py-12 md:py-16">
-          <div className="flex justify-start pt-4 md:pt-8 animate-fade-in-down">
+          {/* <div className="flex justify-start pt-4 md:pt-8 animate-fade-in-down">
             <div className="bg-white/90 backdrop-blur-md p-3 rounded-2xl w-fit md:flex items-center gap-4 shadow-xl border border-white/20 group cursor-pointer hover:bg-white transition-all hidden">
               <div className="relative h-12 w-20 rounded-lg overflow-hidden flex items-center justify-center bg-slate-200">
                 <Play
@@ -115,19 +115,19 @@ export default function HeroSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end animate-fade-in-up">
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <h1 className="text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.1] tracking-tight">
                 Solusi Transportasi Anda <br />
                 <span className="italic font-light opacity-90">
                   a new travel experience.
                 </span>
               </h1>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col items-center md:items-end gap-6 md:gap-10 pb-8">
+            {/* <div className="flex flex-col items-center md:items-end gap-6 md:gap-10 pb-8">
               <p className="text-white/80 text-sm md:text-base max-w-sm text-center md:text-right leading-relaxed font-light hidden md:block">
                 Kami tersedia di berbagai Kota, seperti di Kota Surabaya,
                 Yogyakarta, Bandung dan Bali.
@@ -144,7 +144,7 @@ export default function HeroSection() {
                   <ArrowUpRight size={20} />
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

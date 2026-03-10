@@ -114,7 +114,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <FloatingWA />
         <Footer />
-        <GoogleAnalytics gaId="G-J3NW2Z8D5C" />
+        <GoogleAnalytics gaId="G-C291GLB68B" />
       </body>
     </html>
   );

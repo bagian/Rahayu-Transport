@@ -1,9 +1,9 @@
 "use client";
 
-import {useState, useEffect} from "react";
-import {Menu, X, Search, User} from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Search, User } from "lucide-react";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -28,11 +28,11 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
-    {name: "Home", href: "/"},
+    { name: "Home", href: "/" },
     // {name: "Paket Tour", href: "/packages"},
-    {name: "Armada Kami", href: "/armada"},
-    {name: "Destinasi", href: "/destinasi"},
-    {name: "Tentang Kami", href: "/tentang-kami"},
+    { name: "Armada Kami", href: "/armada" },
+    // {name: "Destinasi", href: "/destinasi"},
+    { name: "Tentang Kami", href: "/tentang-kami" },
   ];
 
   return (

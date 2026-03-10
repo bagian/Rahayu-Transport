@@ -1,8 +1,8 @@
-import {Mail, MapPin, Phone, ArrowRight} from "lucide-react";
+import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-import {FaTiktok, FaFacebook, FaInstagram} from "react-icons/fa6";
+import { FaTiktok, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,26 +14,31 @@ export default function Footer() {
       href: "https://www.instagram.com/rahayu_transport/",
       label: "Instagram",
     },
+    // {
+    //   Icon: FaFacebook,
+    //   href: "https://facebook.com/rahayutrans",
+    //   label: "Facebook",
+    // },
     {
-      Icon: FaFacebook,
-      href: "https://facebook.com/rahayutrans",
-      label: "Facebook",
+      Icon: FaTiktok,
+      href: "https://tiktok.com/@rahayutrans",
+      label: "TikTok",
     },
-    {Icon: FaTiktok, href: "https://tiktok.com/@rahayutrans", label: "TikTok"},
   ];
 
   const footerLinks = {
     layanan: [
-      {name: "Sewa Mobil Lepas Kunci", href: "/armada"},
-      {name: "Sewa Mobil + Driver", href: "/armada"},
-      {name: "Sewa Bus & Elf", href: "/armada"},
-      {name: "Antar Jemput Bandara", href: "/armada"},
+      { name: "Travel AKDP", href: "/armada" },
+      // { name: "Travel Surabaya, Bondowoso", href: "/armada" },
+      { name: "Sewa Mobil + Driver", href: "/armada" },
+      { name: "Sewa Bus & Elf", href: "/armada" },
+      { name: "Antar Jemput Bandara", href: "/armada" },
     ],
     perusahaan: [
-      {name: "Tentang Kami", href: "/about"},
-      {name: "Syarat & Ketentuan", href: "#"},
-      {name: "Kebijakan Privasi", href: "#"},
-      {name: "Hubungi Kami", href: "/contact"},
+      { name: "Tentang Kami", href: "/about" },
+      { name: "Syarat & Ketentuan", href: "#" },
+      { name: "Kebijakan Privasi", href: "#" },
+      { name: "Hubungi Kami", href: "/contact" },
     ],
   };
 
@@ -144,7 +149,7 @@ export default function Footer() {
             <span className="text-slate-600 font-bold">Rahayu Trans</span>.
             Semua Hak Dilindungi.
           </p>
-          <div className="flex gap-6 items-center">
+          {/* <div className="flex gap-6 items-center">
             <span className="text-slate-600 text-xs uppercase tracking-wider">
               Metode Pembayaran:
             </span>
@@ -186,7 +191,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -3,7 +3,6 @@ import Image from "next/image";
 const partnerLogos = [
   {
     name: "Garuda Indonesia",
-    // Menggunakan URL yang lebih stabil dan ramah hotlinking
     src: "/img/logo/garuda-indonesia.png",
   },
   {

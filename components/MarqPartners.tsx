@@ -1,0 +1,106 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const partnerLogos = [
+  {
+    name: "Garuda Indonesia",
+    src: "/img/logo/garuda-indonesia.png",
+  },
+  {
+    name: "Marriott Putrajaya",
+    src: "/img/logo/marriot-putrajaya.png",
+  },
+  {
+    name: "Telkomsel",
+    src: "/img/logo/telkomsel.png",
+  },
+  {
+    name: "Traveloka",
+    src: "/img/logo/traveloka.png",
+  },
+  {
+    name: "Citilink",
+    src: "/img/logo/citilink.png",
+  },
+  {
+    name: "Lion Air",
+    src: "/img/logo/lion-air.png",
+  },
+];
+
+const duplicatedLogos = [...partnerLogos, ...partnerLogos];
+
+export default function Partners() {
+  return (
+    <section className="py-20 border-y border-slate-100 bg-transparent overflow-hidden w-full antialiased suppress-hydration-warning">
+      <div className="container mx-auto px-6 mb-12">
+        <p className="text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">
+          Trusted Partner & Collaboration
+        </p>
+      </div>
+
+      <div className="relative w-full overflow-hidden">
+        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+
+        <motion.div
+          className="flex flex-row flex-nowrap min-w-max will-change-transform transform-gpu"
+          animate={{
+            x: ["0%", "-50%"],
+          }}
+          transition={{
+            duration: 35,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {duplicatedLogos.map((logo, index) => (
+            <div
+              key={index}
+              className="relative shrink-0 flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out cursor-pointer"
+              style={{
+                height: "var(--logo-height)",
+                width: "var(--logo-width)",
+                margin: "0 var(--logo-margin)",
+              }}
+            >
+              <style jsx>{`
+                div {
+                  --logo-height: 40px;
+                  --logo-width: 128px;
+                  --logo-margin: 16px; /* Mobile (default) */
+                }
+                @media (min-width: 768px) {
+                  div {
+                    --logo-height: 48px;
+                    --logo-width: 160px;
+                    --logo-margin: 32px; /* Tablet */
+                  }
+                }
+                @media (min-width: 1024px) {
+                  div {
+                    --logo-height: 64px;
+                    --logo-width: 192px;
+                    --logo-margin: 48px; /* Desktop */
+                  }
+                }
+              `}</style>
+
+              <Image
+                src={logo.src}
+                alt={`${logo.name} Partner Logo`}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+                priority
+                unoptimized
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

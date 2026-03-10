@@ -1,6 +1,6 @@
 "use client";
 
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal"; // Impor pembungkus tadi
 import HeroRental from "@/components/HeroRental";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -9,14 +9,15 @@ import BookingSteps from "@/components/BookingSteps";
 import CtaBanner from "@/components/CtaBanner";
 import Testimonials from "@/components/Testimonial";
 import Faq from "@/components/FaQ";
-import Partners from "@/components/Partners";
+// import Partners from "@/components/Partners";
+import Partners from "@/components/MarqPartners";
 
 export default function Home() {
   return (
     <motion.main
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      transition={{duration: 0.5}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       {/* Hero biasanya muncul langsung, jadi tidak perlu ScrollReveal */}
       <HeroRental />

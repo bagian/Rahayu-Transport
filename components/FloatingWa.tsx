@@ -1,4 +1,4 @@
-import {MessageCircle} from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function FloatingWA() {
   return (
@@ -28,7 +28,7 @@ export default function FloatingWA() {
 
         {/* Bubble WhatsApp */}
         <a
-          href="https://wa.me/6281234567890"
+          href="https://wa.me/6285784809074"
           target="_blank"
           rel="noopener noreferrer"
           className="

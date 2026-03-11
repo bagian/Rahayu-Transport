@@ -1,10 +1,10 @@
 "use client";
 
-import {useState} from "react";
-import {Users, Settings2, CheckCircle2} from "lucide-react";
+import { useState } from "react";
+import { Users, Settings2, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {FLEET_DATA} from "@/data/fleet";
+import { FLEET_DATA } from "@/data/fleet";
 
 export default function FleetPage() {
   const [activeFilter, setActiveFilter] = useState("Semua");

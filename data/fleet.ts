@@ -10,7 +10,6 @@ export interface Vehicle {
   pricePerDay: number;
   images: string[];
   features: string[];
-  // Tambahan Data Penting:
   year: string; // Menentukan unit baru/lama
   engine: string; // Misal: 2.0L, 1.5L, dll
   fuelType: string; // Bensin/Diesel
@@ -22,8 +21,8 @@ export interface Vehicle {
 export const FLEET_DATA: Vehicle[] = [
   {
     id: 1,
-    slug: "toyota-innova-zenix",
-    name: "Toyota Innova Zenix",
+    slug: "toyota-innova-zenix-hybrid",
+    name: "Toyota Innova Zenix Hybrid",
     category: "MPV",
     transmission: "Automatic",
     capacity: 7,

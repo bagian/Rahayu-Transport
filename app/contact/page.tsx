@@ -1,7 +1,7 @@
 "use client";
 
-import {useState} from "react";
-import {Mail, MapPin, Phone, MessageSquare, Send, Clock} from "lucide-react";
+import { useState } from "react";
+import { Mail, MapPin, Phone, MessageSquare, Send, Clock } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,8 +16,8 @@ export default function ContactPage() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
-    const {name, value} = e.target;
-    setFormData((prev) => ({...prev, [name]: value}));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleWhatsAppRedirect = (e: React.FormEvent) => {
@@ -65,7 +65,8 @@ export default function ContactPage() {
                     Kantor Pusat
                   </h4>
                   <p className="text-slate-500 text-xs leading-relaxed">
-                    Sidoarjo, Jawa Timur, Indonesia
+                    Jl. Jawa No.5A, Gubeng, Kec. Gubeng, Surabaya, Jawa Timur
+                    60295
                   </p>
                 </div>
               </div>
@@ -86,9 +87,9 @@ export default function ContactPage() {
             </div>
 
             {/* Google Maps - Height disesuaikan agar sejajar dengan Form */}
-            <div className="w-full flex-grow min-h-[400px] lg:min-h-0 rounded-[40px] overflow-hidden border border-slate-100 shadow-sm grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="w-full flex-grow min-h-[400px] lg:min-h-0 rounded-[40px] overflow-hidden border border-slate-100 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126628.2435496417!2d112.63234988674558!3d-7.450410403750831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e10df19c0165%3A0x3027a76352920f0!2sSidoarjo%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7183442954174!2d112.74438737586877!3d-7.272856692734174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbdbc68f3909%3A0x29c88dacfa8bea3f!2sPPGW%2BQQW%2C%20Jl.%20Jawa%20No.5-A%2C%20RT.002%2FRW.09%2C%20Gubeng%2C%20Kec.%20Gubeng%2C%20Surabaya%2C%20Jawa%20Timur%2060281!5e0!3m2!1sen!2sid!4v1773186172632!5m2!1sen!2sid"
                 className="w-full h-full border-0"
                 allowFullScreen={true}
                 loading="lazy"

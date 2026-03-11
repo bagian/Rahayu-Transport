@@ -27,19 +27,30 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rahayutransport.web.id"),
 
   title: {
-    default: "Rahayu Transport | Jasa Sewa Mobil Sidoarjo & Surabaya",
+    default:
+      "Rahayu Transport | Jasa Sewa Mobil Surabaya, Yogyakarta, dan Solo",
     template: "%s | Rahayu Transport",
   },
   description:
     "Rahayu Transport adalah solusi jasa sewa mobil dan kendaraan terpercaya dengan pilihan armada terlengkap, bersih, dan terawat. Kami hadir melayani perjalanan wisata, bisnis, hingga kebutuhan keluarga Anda di Bandung, Surabaya, Yogyakarta, dan Bali. Nikmati kenyamanan, keamanan, dan layanan profesional dengan harga kompetitif. Pesan sekarang untuk pengalaman perjalanan tanpa hambatan!",
   keywords: [
-    "sewa mobil Bandung",
-    "rental mobil Bandung",
-    "jasa sewa kendaraan",
-    "sewa mobil Surabaya",
-    "rental mobil terdekat",
-    "sewa mobil murah",
     "Rahayu Transport",
+    "Rahayu Transport Surabaya",
+    "Rahayu Transport Yogyakarta",
+    "Rahayu Transport Solo",
+    "Sewa Mobil Surabaya",
+    "Rental Mobil Surabaya",
+    "Sewa Mobil Yogyakarta",
+    "Rental Mobil Yogyakarta",
+    "Sewa Mobil Solo",
+    "Rental Mobil Solo",
+    "Sewa Mobil Murah Surabaya",
+    "Sewa Mobil Murah Yogyakarta",
+    "Sewa Mobil Murah Solo",
+    "Sewa Mobil Harian, Mingguan Surabaya",
+    "Sewa Mobil Harian, Mingguan Yogyakarta",
+    "Sewa Mobil Harian, Mingguan Solo",
+    "Jasa Sewa Kendaraan Jawa Timur, DIY, Jawa Tengah",
   ],
   authors: [{ name: "Rahayu Transport" }],
   creator: "Bagian Corps",
@@ -56,7 +67,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Rahayu Transport | Jasa Sewa Mobil Terpercaya",
+    title:
+      "Rahayu Transport | Solusi Transportasi Anda. Nyaman, Aman, Terpercaya",
     description:
       "Rahayu Transport adalah solusi jasa sewa mobil dan kendaraan terpercaya dengan pilihan armada terlengkap, bersih, dan terawat. Kami hadir melayani perjalanan wisata, bisnis, hingga kebutuhan keluarga Anda di Bandung, Surabaya, Yogyakarta, dan Bali. Nikmati kenyamanan, keamanan, dan layanan profesional dengan harga kompetitif. Pesan sekarang untuk pengalaman perjalanan tanpa hambatan!",
     url: "/",
@@ -75,7 +87,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Rahayu Transport | Sewa Mobil Sidoarjo",
+    title:
+      "Rahayu Transport | Solusi Transportasi Anda. Nyaman, Aman, Terpercaya",
     description:
       "Layanan jasa sewa mobil dan kendaraan terpercaya dengan harga terjangkau.",
     images: ["/og-image.jpg"],
@@ -115,6 +128,48 @@ export default function RootLayout({
         <FloatingWA />
         <Footer />
         <GoogleAnalytics gaId="G-C291GLB68B" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutoRental",
+              name: "Rahayu Transport",
+              image: "https://rahayutransport.web.id/og-image.jpg",
+              "@id": "https://rahayutransport.web.id",
+              url: "https://rahayutransport.web.id",
+              telephone: "+6281xxxxxxxx",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                  "Jl. Jawa No.5A, Gubeng, Kec. Gubeng, Surabaya, Jawa Timur 60295",
+                addressLocality: "Surabaya",
+                addressRegion: "Jawa Timur",
+                postalCode: "60295",
+                addressCountry: "ID",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: -7.2728567,
+                longitude: 112.7469623,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday",
+                ],
+                opens: "00:00",
+                closes: "23:59",
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );

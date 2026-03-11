@@ -123,20 +123,24 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-red-600 shrink-0" />
                 <span className="text-slate-500 text-sm">
-                  Surabaya, Jawa Timur, Indonesia
+                  Jl. Jawa No.5A, Gubeng, Kec. Gubeng, Surabaya, Jawa Timur
+                  60295
                 </span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-red-600 shrink-0" />
-                <span className="text-slate-500 text-sm">
-                  +62 812 3456 7890
-                </span>
+                <div className="flex flex-col ">
+                  <span className="text-slate-500 text-sm">
+                    +62 812 3456 7890 (....)
+                  </span>
+                  <span className="text-slate-500 text-sm">
+                    +62 812 3456 7890 (....)
+                  </span>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-red-600 shrink-0" />
-                <span className="text-slate-500 text-sm">
-                  hello@rahayutrans.com
-                </span>
+                <span className="text-slate-500 text-sm">email</span>
               </div>
             </div>
           </div>

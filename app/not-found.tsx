@@ -1,12 +1,12 @@
 "use client";
 
-import {Home, ArrowLeft} from "lucide-react";
+import { Home, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-24 selection:bg-red-100">
+    <div className="min-h-screen flex items-center justify-center px-6 py-32 selection:bg-red-100">
       <div className="container max-w-4xl mx-auto flex flex-col items-center text-center">
         {/* Visual Section - Menggunakan Aset Mobil Utama */}
         <div className="relative w-full max-w-lg aspect-video mb-12 animate-in fade-in zoom-in duration-700">
@@ -61,7 +61,7 @@ export default function NotFound() {
             href="/contact"
             className="text-red-600 text-sm hover:underline transition-all"
           >
-            Hubungi Customer Service
+            Hubungi Customer Service Kami
           </Link>
         </div>
       </div>

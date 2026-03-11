@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function CtaBanner() {
   return (
     <section className="py-24 max-w-[1440px] mx-auto px-6">
-      <div className="relative  rounded-[50px] overflow-hidden shadow-2xl shadow-red-200 min-h-[500px] flex items-center bg-gradient-to-r from-rose-300 to-red-700">
+      <div className="relative  rounded-[50px] overflow-hidden shadow-2xl shadow-red-200 min-h-[500px] flex items-center bg-gradient-to-r from-rose-500 to-red-700">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl z-0" />
         <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-black/10 rounded-full blur-3xl z-0" />
         <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-8 md:px-20 py-16">
@@ -17,21 +17,21 @@ export default function CtaBanner() {
               height={800}
               className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-150 pointer-events-none"
               priority
-              quality={90}
+              quality={100}
               sizes="800px"
             />
           </div>
 
           {/* SISI TEKS */}
           <div className="text-center lg:text-left order-1 lg:order-2">
-            <span className="bg-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-              Info Info
-            </span>
+            {/* <span className="bg-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+              Persiapan
+            </span> */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-6 mb-6 leading-tight">
               Siap Menjelajahi <br />
               <span className="text-slate-900">Perjalanan?</span>
             </h2>
-            <p className="text-white/90 text-base md:text-lg mb-10 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-white/90 text-base md:text-lg mb-28 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
               Nikmati kenyamanan berkendara dengan armada terbaru kami. Dapatkan
               diskon spesial hingga 20% untuk penyewaan di atas 7 hari hanya di
               Rahayu Trans.

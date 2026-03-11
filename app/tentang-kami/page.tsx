@@ -1,6 +1,6 @@
 "use client";
 
-import {useState} from "react";
+import { useState } from "react";
 import {
   ShieldCheck,
   ChevronRight,
@@ -18,10 +18,10 @@ export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<"visi" | "misi">("misi");
 
   const stats = [
-    {label: "Armada Tersedia", val: "50+", sub: "Unit Terawat"},
-    {label: "Pelanggan Puas", val: "1K+", sub: "Telah Dilayani"},
-    {label: "Agen Profesional", val: "100+", sub: "Driver Terlatih"},
-    {label: "Tingkat Kepuasan", val: "95%", sub: "Rating Bintang 5"},
+    { label: "Armada Tersedia", val: "50+", sub: "Unit Terawat" },
+    { label: "Pelanggan Puas", val: "1K+", sub: "Telah Dilayani" },
+    { label: "Agen Profesional", val: "100+", sub: "Driver Terlatih" },
+    { label: "Tingkat Kepuasan", val: "95%", sub: "Rating Bintang 5" },
   ];
 
   return (
@@ -46,13 +46,14 @@ export default function AboutPage() {
 
         {/* 2. MAIN VISUAL */}
         <section className="mb-16 md:mb-24">
-          <div className="relative aspect-video w-full h-[680px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl group">
+          <div className="relative aspect-video w-full h-[480px] md:h-[750px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl group">
             <Image
               src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1600"
               alt="Luxury Fleet Experience"
               fill
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
               priority
+              quality={100}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
@@ -97,7 +98,7 @@ export default function AboutPage() {
             src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1600"
             alt="Interior Luxury Car"
             fill
-            className="object-cover grayscale brightness-[0.2]"
+            className="object-cover grayscale brightness-[0.8]"
           />
         </div>
 
@@ -226,28 +227,29 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            <div className="w-full lg:w-1/2 relative mt-12 lg:mt-0">
+            <div className="w-full lg:w-1/2 relative mt-12 lg:mt-0 hidden md:block">
               <div className="relative aspect-square">
                 <Image
                   src="/img/car/platinum-white-pearl-mc-split.png"
                   alt="Reliability"
                   fill
+                  quality={100}
                   className="object-contain p-6 md:p-4 hover:scale-110 transition-transform duration-700 w-32"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-2 md:-bottom-0 md:-right-1 bg-red-600 text-white p-6 md:p-8 rounded-[24px] md:rounded-[30px] shadow-2xl">
+              {/* <div className="absolute -bottom-4 -right-2 md:-bottom-0 md:-right-1 bg-red-600 text-white p-6 md:p-8 rounded-[24px] md:rounded-[30px] shadow-2xl">
                 <p className="text-2xl md:text-3xl font-black italic">10Y+</p>
                 <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest">
                   Experience
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
 
         {/* 6. CALL TO ACTION */}
         <section className="py-24">
-          <div className="bg-slate-900 rounded-[32px] md:rounded-[50px] p-10 md:p-24 text-center relative overflow-hidden">
+          <div className="bg-black rounded-[32px] md:rounded-[50px] p-10 md:p-24 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
               <div className="absolute top-[-50%] left-[-10%] w-[120%] h-[200%] rotate-12 bg-[repeating-linear-gradient(90deg,transparent,transparent_40px,rgba(255,255,255,0.1)_40px,rgba(255,255,255,0.1)_41px)]" />
             </div>
@@ -260,7 +262,7 @@ export default function AboutPage() {
                 href="/armada"
                 className="bg-red-600 text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl  hover:bg-red-700 transition-all shadow-xl shadow-red-900/20 text-sm md:text-base"
               >
-                Lihat Katalog Mobil
+                Armada Kami
               </Link>
               <Link
                 href="/contact"

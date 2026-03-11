@@ -31,7 +31,7 @@ export default function FeaturedFleet() {
           {featuredCars.map((car) => (
             <div
               key={car.slug} // Menggunakan slug sebagai key karena pasti unik
-              className="group bg-white rounded-[40px] p-5 border border-slate-200/60 hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-500 flex flex-col"
+              className="group bg-white rounded-[40px] p-4 border border-slate-200/60 hover:border-red-200 hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-500 flex flex-col"
             >
               <Link
                 href={`/armada/${car.slug}`}
@@ -77,7 +77,7 @@ export default function FeaturedFleet() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center border-t border-slate-100 pt-6 mt-auto">
+                <div className="flex justify-between items-center border-t border-slate-100 pt-6 pb-6 mt-auto">
                   <div>
                     <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider">
                       Harga/Hari

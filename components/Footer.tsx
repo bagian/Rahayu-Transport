@@ -129,18 +129,24 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-red-600 shrink-0" />
-                <div className="flex flex-col ">
+                <div className="flex flex-col gap-2">
+                  <span className="text-slate-500 text-sm">Sewa Unit : </span>
                   <span className="text-slate-500 text-sm">
-                    +62 812 3456 7890 (....)
+                    +62 857-8480-9074 (Jimmy)
                   </span>
                   <span className="text-slate-500 text-sm">
-                    +62 812 3456 7890 (....)
+                    Tiket Travel :{" "}
+                  </span>
+                  <span className="text-slate-500 text-sm">
+                    +62 821-9174-8949 (Kevin)
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-red-600 shrink-0" />
-                <span className="text-slate-500 text-sm">email</span>
+                <span className="text-slate-500 text-sm">
+                  travelrahahyu@gmail.com
+                </span>
               </div>
             </div>
           </div>
@@ -153,49 +159,18 @@ export default function Footer() {
             <span className="text-slate-600 font-bold">Rahayu Trans</span>.
             Semua Hak Dilindungi.
           </p>
-          {/* <div className="flex gap-6 items-center">
-            <span className="text-slate-600 text-xs uppercase tracking-wider">
-              Metode Pembayaran:
+          <div className="flex gap-6 items-center">
+            <span className="text-slate-400 text-xs font-medium">
+              Made From 🇮🇩 by:
             </span>
-            <div className="flex gap-1">
-              <div className="w-10 h-6 bg-slate-100 border border-slate-200 rounded flex items-center justify-center text-[8px] font-bold text-slate-400">
-                <div className="relative w-[32px] h-[13px]">
-                  <Image
-                    src="/img/logo/BCA.png"
-                    alt="Rahayu Transport"
-                    fill
-                    priority
-                    className="object-cover pointer-events-none"
-                    quality={100}
-                  />
-                </div>
-              </div>
-              <div className="w-10 h-6 bg-slate-100 border border-slate-200 rounded flex items-center justify-center text-[8px] font-bold text-slate-400">
-                <div className="relative w-[32px] h-[11px]">
-                  <Image
-                    src="/img/logo/VISA.png"
-                    alt="Rahayu Transport"
-                    fill
-                    priority
-                    className="object-cover pointer-events-none"
-                    quality={100}
-                  />
-                </div>
-              </div>
-              <div className="w-10 h-6 bg-slate-100 border border-slate-200 rounded flex items-center justify-center text-[8px] font-bold text-slate-400">
-                <div className="relative w-[35px] h-[10px]">
-                  <Image
-                    src="/img/logo/Mandiri.png"
-                    alt="Rahayu Transport"
-                    fill
-                    priority
-                    className="object-cover pointer-events-none"
-                    quality={100}
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
+            <Link
+              className="text-slate-400 text-xs font-medium"
+              href="https://www.bagian.web.id"
+              target="_blank"
+            >
+              Bagian Corps
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

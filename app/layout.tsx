@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Rahayu Transport",
   },
   description:
-    "Rahayu Transport adalah solusi jasa sewa mobil dan kendaraan terpercaya dengan pilihan armada terlengkap, bersih, dan terawat. Kami hadir melayani perjalanan wisata, bisnis, hingga kebutuhan keluarga Anda di Bandung, Surabaya, Yogyakarta, dan Bali. Nikmati kenyamanan, keamanan, dan layanan profesional dengan harga kompetitif. Pesan sekarang untuk pengalaman perjalanan tanpa hambatan!",
+    "Rahayu Transport adalah penyedia layanan sewa mobil, Hiace, Elf Long, dan bus pariwisata yang melayani berbagai kebutuhan perjalanan di Indonesia. Dengan jaringan layanan di Lombok, Bali, Banyuwangi, Surabaya, Yogyakarta, Semarang, Bandung, dan Palembang, serta pengalaman menangani tamu VIP hingga tamu kenegaraan, Rahayu Transport siap memberikan layanan transportasi yang aman, nyaman, dan profesional.",
   keywords: [
     "Rahayu Transport",
     "Rahayu Transport Surabaya",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title:
       "Rahayu Transport | Solusi Transportasi Anda. Nyaman, Aman, Terpercaya",
     description:
-      "Rahayu Transport adalah solusi jasa sewa mobil dan kendaraan terpercaya dengan pilihan armada terlengkap, bersih, dan terawat. Kami hadir melayani perjalanan wisata, bisnis, hingga kebutuhan keluarga Anda di Bandung, Surabaya, Yogyakarta, dan Bali. Nikmati kenyamanan, keamanan, dan layanan profesional dengan harga kompetitif. Pesan sekarang untuk pengalaman perjalanan tanpa hambatan!",
+      "Rahayu Transport adalah penyedia layanan sewa mobil, Hiace, Elf Long, dan bus pariwisata yang melayani berbagai kebutuhan perjalanan di Indonesia. Dengan jaringan layanan di Lombok, Bali, Banyuwangi, Surabaya, Yogyakarta, Semarang, Bandung, dan Palembang, serta pengalaman menangani tamu VIP hingga tamu kenegaraan, Rahayu Transport siap memberikan layanan transportasi yang aman, nyaman, dan profesional.",
     url: "/",
     siteName: "Rahayu Transport",
     locale: "id_ID",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rahayu Transport - Jasa Sewa Kendaraan di Bandung, Surabaya, Yogyakarta, dan Bali",
+        alt: "Layanan jasa sewa mobil dan kendaraan terpercaya, profesional, nyaman dan aman terletak di 8 Kota Terbesar di Indonesia.",
       },
     ],
   },
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     title:
       "Rahayu Transport | Solusi Transportasi Anda. Nyaman, Aman, Terpercaya",
     description:
-      "Layanan jasa sewa mobil dan kendaraan terpercaya dengan harga terjangkau.",
+      "Layanan jasa sewa mobil dan kendaraan terpercaya, profesional, nyaman dan aman terletak di 8 Kota Terbesar di Indonesia.",
     images: ["/og-image.jpg"],
   },
 

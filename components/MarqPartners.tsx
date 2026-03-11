@@ -5,28 +5,40 @@ import { motion } from "framer-motion";
 
 const partnerLogos = [
   {
-    name: "Garuda Indonesia",
-    src: "/img/logo/garuda-indonesia.png",
+    name: "Bank BRI",
+    src: "/img/logo/bri-logo.png",
   },
   {
-    name: "Marriott Putrajaya",
-    src: "/img/logo/marriot-putrajaya.png",
+    name: "Cetakin",
+    src: "/img/logo/cetakin-logo.png",
   },
   {
-    name: "Telkomsel",
-    src: "/img/logo/telkomsel.png",
+    name: "Jamkrindo",
+    src: "/img/logo/jamkrindo-logo.png",
   },
   {
-    name: "Traveloka",
-    src: "/img/logo/traveloka.png",
+    name: "Kereta Api Indonesia",
+    src: "/img/logo/kai-logo.png",
   },
   {
-    name: "Citilink",
-    src: "/img/logo/citilink.png",
+    name: "Len",
+    src: "/img/logo/len-logo.png",
   },
   {
-    name: "Lion Air",
-    src: "/img/logo/lion-air.png",
+    name: "Leni",
+    src: "/img/logo/leni-logo.png",
+  },
+  {
+    name: "Bank Mandiri",
+    src: "/img/logo/mandiri-logo.png",
+  },
+  {
+    name: "Pertamina",
+    src: "/img/logo/pertamina-logo.png",
+  },
+  {
+    name: "Pindad",
+    src: "/img/logo/pindad-logo.png",
   },
 ];
 
@@ -75,15 +87,15 @@ export default function Partners() {
                 @media (min-width: 768px) {
                   div {
                     --logo-height: 48px;
-                    --logo-width: 160px;
+                    --logo-width: 140px;
                     --logo-margin: 32px; /* Tablet */
                   }
                 }
                 @media (min-width: 1024px) {
                   div {
                     --logo-height: 64px;
-                    --logo-width: 192px;
-                    --logo-margin: 48px; /* Desktop */
+                    --logo-width: 150px;
+                    --logo-margin: 58px; /* Desktop */
                   }
                 }
               `}</style>

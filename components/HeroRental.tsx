@@ -18,17 +18,20 @@ const slides = [
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1737289385340-204818e71d3b?q=80&w=1773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/car/bus-interior-1.jpeg",
   },
-  // {
-  //   id: 3,
-  //   image: "/img/car/Toyota-Alphard-2024.jpeg",
-  // },
-  // {
-  //   id: 4,
-  //   image: "/img/car/Mitsubishi-Pajero-Sport.webp",
-  // },
+  {
+    id: 3,
+    image: "/img/car/bus-interior-2.jpeg",
+  },
+  {
+    id: 4,
+    image: "/img/car/bus-pariwisata.jpeg",
+  },
+  {
+    id: 5,
+    image: "/img/car/minibus-pariwasata.jpeg",
+  },
 ];
 
 export default function HeroSection() {

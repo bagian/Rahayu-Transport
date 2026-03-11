@@ -14,34 +14,33 @@ import "swiper/css/pagination";
 const slides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1770&auto=format&fit=crop",
+    image: "/img/slider/promo-opening.png",
   },
   {
     id: 2,
     image:
       "https://images.unsplash.com/photo-1737289385340-204818e71d3b?q=80&w=1773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-  {
-    id: 3,
-    image: "/img/car/Toyota-Alphard-2024.jpeg",
-  },
-  {
-    id: 4,
-    image: "/img/car/Mitsubishi-Pajero-Sport.webp",
-  },
+  // {
+  //   id: 3,
+  //   image: "/img/car/Toyota-Alphard-2024.jpeg",
+  // },
+  // {
+  //   id: 4,
+  //   image: "/img/car/Mitsubishi-Pajero-Sport.webp",
+  // },
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[calc(100vh-80px)] md:h-[calc(90vh-80px)] min-h-[600px] overflow-hidden pb-10 pt-32 max-w-[2440px] mx-auto px-4">
-      <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
+    <section className="relative w-full h-[calc(50vh-80px)] md:h-[calc(100vh-80px)] min-h-[600px] pb-10 pt-32 max-w-[1440px] mx-auto lg:px-4 px-2">
+      <div className="relative w-full h-full overflow-hidden lg:rounded-[2.5rem] rounded-[1.5rem] shadow-2xl">
         <div className="absolute inset-0 z-0">
           <Swiper
             modules={[Autoplay, EffectFade, Pagination]}
             effect="fade"
             fadeEffect={{ crossFade: true }}
-            autoplay={{ delay: 6000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
             speed={1500}
             pagination={{ clickable: true }}
@@ -49,7 +48,6 @@ export default function HeroSection() {
           >
             {slides.map((slide) => (
               <SwiperSlide key={slide.id} className="bg-black">
-                <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-transparent to-black/20" />
                 <Image
                   src={slide.image}
                   alt="Rental Mobil"

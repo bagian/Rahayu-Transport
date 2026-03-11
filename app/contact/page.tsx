@@ -22,7 +22,7 @@ export default function ContactPage() {
 
   const handleWhatsAppRedirect = (e: React.FormEvent) => {
     e.preventDefault();
-    const adminPhone = "6281234567890";
+    const adminPhone = "6285784809074";
     const text =
       `Halo Rahayu Trans, saya ingin memesan kendaraan:%0A%0A` +
       `*Nama:* ${formData.name}%0A` +
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     WhatsApp
                   </h4>
                   <p className="text-slate-500 text-xs leading-relaxed">
-                    +62 812 3456 7890
+                    +62 857 8480 9074
                   </p>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Contoh: Lepas kunci / dengan driver, lokasi jemput..."
+                    placeholder="Contoh: Dengan driver, lokasi jemput..."
                     className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:outline-none focus:border-red-600 transition-all text-sm font-medium resize-none"
                   />
                 </div>

@@ -150,15 +150,16 @@ export default function ContactPage() {
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">
                     Rencana Tanggal Sewa
                   </label>
-                  {/* Perbaikan: Menambahkan onClick showPicker() agar seluruh area input memicu kalender */}
                   <input
                     required
                     type="date"
                     name="date"
                     value={formData.date}
                     onChange={handleInputChange}
-                    onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-                    className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:outline-none focus:border-red-600 transition-all text-sm font-medium cursor-pointer"
+                    /* HAPUS onClick showPicker() sepenuhnya 
+      dan tambahkan class CSS di bawah ini 
+    */
+                    className="relative w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:outline-none focus:border-red-600 transition-all text-sm font-medium cursor-pointer [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:top-0 [&::-webkit-calendar-picker-indicator]:left-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
                   />
                 </div>
 

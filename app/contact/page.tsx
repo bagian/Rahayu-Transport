@@ -47,8 +47,8 @@ export default function ContactPage() {
           </h1>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-xl">
             Punya pertanyaan mengenai unit armada atau ingin melakukan pemesanan
-            khusus? Tim Rahayu Trans siap melayani Anda 24/7 di wilayah Sidoarjo
-            dan sekitarnya.
+            khusus? Tim Rahayu Transport siap melayani Anda 24/7 di wilayah
+            Surabaya dan sekitarnya.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
           {/* SISI KIRI: Info Kontak & Maps (Sejajar dengan Form) */}
           <div className="lg:col-span-5 flex flex-col gap-8 h-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-              <div className="flex gap-4 group bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="flex gap-4 group bg-white p-4 rounded-2xl border border-rose-100 shadow-sm">
                 <div className="w-12 h-12 shrink-0 rounded-xl bg-red-50 flex items-center justify-center text-red-600">
                   <MapPin size={20} />
                 </div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 group bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="flex gap-4 group bg-white p-4 rounded-2xl border border-rose-100 shadow-sm">
                 <div className="w-12 h-12 shrink-0 rounded-xl bg-red-50 flex items-center justify-center text-red-600">
                   <Phone size={20} />
                 </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
             </div>
 
             {/* Google Maps - Height disesuaikan agar sejajar dengan Form */}
-            <div className="w-full flex-grow min-h-[400px] lg:min-h-0 rounded-[40px] overflow-hidden border border-slate-100 shadow-sm">
+            <div className="w-full flex-grow min-h-[400px] lg:min-h-0 rounded-[1.2rem] overflow-hidden border border-rose-100 shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7183442954174!2d112.74438737586877!3d-7.272856692734174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbdbc68f3909%3A0x29c88dacfa8bea3f!2sPPGW%2BQQW%2C%20Jl.%20Jawa%20No.5-A%2C%20RT.002%2FRW.09%2C%20Gubeng%2C%20Kec.%20Gubeng%2C%20Surabaya%2C%20Jawa%20Timur%2060281!5e0!3m2!1sen!2sid!4v1773186172632!5m2!1sen!2sid"
                 className="w-full h-full border-0"
@@ -99,7 +99,7 @@ export default function ContactPage() {
 
           {/* SISI KANAN: Form Pemesanan */}
           <div className="lg:col-span-7">
-            <div className="p-8 md:p-12 rounded-[40px] border border-slate-100 shadow-2xl shadow-red-500/5 bg-white">
+            <div className="p-8 md:p-12 rounded-[1.2rem] border border-rose-100 shadow-2xl shadow-red-500/5 bg-white">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center">
                   <MessageSquare size={20} />
@@ -178,7 +178,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-red-600 text-white py-5 rounded-2xl font-semibold flex items-center justify-center gap-3 hover:bg-red-700 transition-all shadow-xl shadow-red-200 cursor-pointer group active:scale-[0.98]"
+                  className="w-full text-sm bg-red-600 text-white py-5 rounded-2xl font-semibold flex items-center justify-center gap-3 hover:bg-red-700 transition-all shadow-xl shadow-red-200 cursor-pointer group active:scale-[0.98]"
                 >
                   <Send
                     size={20}

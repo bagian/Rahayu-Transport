@@ -155,7 +155,7 @@ export default function TravelAKDPPage() {
         {/* SECTION 2: BONDOWOSO - SURABAYA */}
         <div>
           <div className="flex items-center gap-4 mb-8 pb-4 border-b border-slate-100">
-            <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 shrink-0">
+            <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-600 shrink-0">
               <MapPin size={24} />
             </div>
             <div>

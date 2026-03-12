@@ -28,7 +28,7 @@ export default function Footer() {
 
   const footerLinks = {
     layanan: [
-      { name: "Travel AKDP", href: "/armada" },
+      { name: "Travel AKDP", href: "/travel-akdp" },
       // { name: "Travel Surabaya, Bondowoso", href: "/armada" },
       { name: "Sewa Mobil + Driver", href: "/armada" },
       { name: "Sewa Bus & Elf", href: "/armada" },

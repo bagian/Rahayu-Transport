@@ -71,7 +71,7 @@ export default function Partners() {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="relative shrink-0 flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out cursor-pointer"
+              className="relative shrink-0 flex items-center justify-center"
               style={{
                 height: "var(--logo-height)",
                 width: "var(--logo-width)",

@@ -1,4 +1,3 @@
-// app/armada/[slug]/page.tsx
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FLEET_DATA } from "@/data/fleet";
@@ -14,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!vehicle) return { title: "Unit Tidak Ditemukan" };
 
-  const title = `Sewa Mobil ${vehicle.name} Surabaya`;
+  const title = `Sewa Mobil ${vehicle.name} Surabaya | Rahayu Transport`;
   const description = `Sewa mobil ${vehicle.name} Surabaya. ${vehicle.description.slice(0, 120)}... Harga Rp ${vehicle.pricePerDay.toLocaleString("id-ID")}/hari.`;
 
   return {

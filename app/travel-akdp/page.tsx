@@ -30,9 +30,9 @@ const TravelCard = ({ travel }: { travel: TravelAKDP }) => (
 
       {/* Badge Kanan Atas (Tipe Travel) */}
       <div className="absolute top-4 right-4">
-        <span className="bg-white/95 backdrop-blur-sm text-slate-900 text-[9px] md:text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full border border-slate-100 shadow-sm">
+        {/* <span className="bg-white/95 backdrop-blur-sm text-slate-900 text-[9px] md:text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full border border-slate-100 shadow-sm">
           {travel.type} Class
-        </span>
+        </span> */}
       </div>
     </div>
 

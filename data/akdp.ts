@@ -29,15 +29,15 @@ export const AKDP_DATA: TravelAKDP[] = [
   },
   {
     id: "sb-2",
-    name: "Travel Innova Zenix Malam",
-    slug: "zenix-surabaya-bondowoso-malam",
+    name: "Travel Elf Long",
+    slug: "elf-long-surabaya-bondowoso-malam",
     route: "Surabaya-Bondowoso",
     type: "VIP",
     price: 200000,
-    seats: 6,
+    seats: 19,
     departureTime: "19:00 WIB",
     via: "Tol Probolinggo",
-    image: "/img/car/Toyota-Innova-Zenix.webp",
+    image: "/img/car/elf-long.webp",
   },
 
   // --- SECTION: BONDOWOSO TO SURABAYA ---
@@ -55,14 +55,14 @@ export const AKDP_DATA: TravelAKDP[] = [
   },
   {
     id: "bs-2",
-    name: "Travel Innova Zenix Sore",
-    slug: "zenix-bondowoso-surabaya-sore",
+    name: "Travel Elf Long",
+    slug: "elf-long-bondowoso-surabaya-sore",
     route: "Bondowoso-Surabaya",
     type: "VIP",
     price: 200000,
-    seats: 6,
+    seats: 19,
     departureTime: "15:00 WIB",
     via: "Situbondo - Tol",
-    image: "/img/car/Toyota-Innova-Zenix.webp",
+    image: "/img/car/elf-long.webp",
   },
 ];

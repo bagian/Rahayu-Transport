@@ -36,8 +36,8 @@ export default function Footer() {
     ],
     perusahaan: [
       { name: "Tentang Kami", href: "/about" },
-      { name: "Syarat & Ketentuan", href: "#" },
-      { name: "Kebijakan Privasi", href: "#" },
+      { name: "Syarat & Ketentuan", href: "/syarat-ketentuan" },
+      { name: "Kebijakan Privasi", href: "/kebijakan-privasi" },
       { name: "Hubungi Kami", href: "/contact" },
     ],
   };

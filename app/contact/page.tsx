@@ -142,6 +142,7 @@ export default function ContactPage() {
                       <option value="Toyota Fortuner">Toyota Fortuner</option>
                       <option value="Toyota Alphard">Toyota Alphard</option>
                       <option value="Honda Brio">Honda Brio</option>
+                      <option value="Travel AKDP">Travel AKDP</option>
                     </select>
                   </div>
                 </div>

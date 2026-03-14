@@ -130,12 +130,14 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-red-600 shrink-0" />
                 <div className="flex flex-col gap-2">
-                  <span className="text-slate-500 text-sm">Sewa Unit : </span>
+                  <span className="text-slate-500 text-sm font-semibold">
+                    Sewa Unit
+                  </span>
                   <span className="text-slate-500 text-sm">
                     +62 857-8480-9074 (Jimmy)
                   </span>
-                  <span className="text-slate-500 text-sm">
-                    Tiket Travel :{" "}
+                  <span className="text-slate-500 text-sm font-semibold">
+                    Tiket Travel
                   </span>
                   <span className="text-slate-500 text-sm">
                     +62 821-9174-8949 (Kevin)

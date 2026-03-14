@@ -136,9 +136,10 @@ export default function AboutPage() {
                     Menjadi Standar Baru <br /> Transportasi di Jawa Timur.
                   </h2>
                   <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
-                    Visi kami adalah memimpin industri jasa transportasi dengan
-                    mengedepankan integrasi teknologi dan pelayanan personal
-                    bagi warga Sidoarjo dan Surabaya.
+                    Menjadi perusahaan layanan perjalanan terdepan dan
+                    terpercaya di Indonesia yang mampu menciptakan pengalaman
+                    perjalanan tak terlupakan melalui pelayanan prima dan
+                    inovasi berkelanjutan
                   </p>
                 </div>
               ) : (
@@ -146,11 +147,26 @@ export default function AboutPage() {
                   <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
                     Inovasi Pelayanan demi <br /> Kepuasan Mutlak Anda.
                   </h2>
-                  <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
-                    Misi kami adalah menyediakan armada terbaru dengan perawatan
-                    rutin ketat serta driver profesional yang memahami rute
-                    terbaik demi efisiensi waktu Anda.
-                  </p>
+                  <div className="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
+                    <ul className="list-decimal list-outside pl-5 space-y-3 marker:text-red-600 marker:font-bold">
+                      <li className="pl-2">
+                        Memberikan solusi perjalanan yang personal, aman, dan
+                        nyaman bagi setiap pelanggan.
+                      </li>
+                      <li className="pl-2">
+                        Membangun jaringan kemitraan yang luas dengan penyedia
+                        akomodasi dan transportasi terbaik.
+                      </li>
+                      <li className="pl-2">
+                        Mengedepankan profesionalisme dan keramahan dalam setiap
+                        interaksi dengan pelanggan.
+                      </li>
+                      <li className="pl-2">
+                        Menawarkan paket perjalanan berkualitas dengan harga
+                        yang kompetitif.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               )}
 

@@ -14,7 +14,6 @@ const TravelCard = ({ travel }: { travel: TravelAKDP }) => (
     href={`/travel-akdp/${travel.slug}`}
     className="group flex flex-col bg-white rounded-[24px] md:rounded-[32px] border border-slate-100 hover:border-red-200 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-red-500/10 cursor-pointer h-full"
   >
-    {/* Image Section */}
     <div className="relative h-48 sm:h-56 w-full bg-slate-100 overflow-hidden shrink-0">
       {travel.image ? (
         <Image
@@ -27,8 +26,6 @@ const TravelCard = ({ travel }: { travel: TravelAKDP }) => (
       ) : (
         <div className="w-full h-full bg-slate-200 animate-pulse" />
       )}
-
-      {/* Badge Kanan Atas (Tipe Travel) */}
       <div className="absolute top-4 right-4">
         {/* <span className="bg-white/95 backdrop-blur-sm text-slate-900 text-[9px] md:text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full border border-slate-100 shadow-sm">
           {travel.type} Class
@@ -43,13 +40,9 @@ const TravelCard = ({ travel }: { travel: TravelAKDP }) => (
           Rute {travel.route.replace("-", " ➔ ")}
         </span>
       </div>
-
-      {/* Judul berubah merah saat card di-hover */}
       <h3 className="text-xl font-bold text-slate-900 mb-6 group-hover:text-red-600 transition-colors line-clamp-2">
         {travel.name}
       </h3>
-
-      {/* Specs Row (Kapasitas & Jam) */}
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-2xl border border-slate-100">
           <Users size={16} className="text-slate-400 shrink-0" />
@@ -82,7 +75,6 @@ const TravelCard = ({ travel }: { travel: TravelAKDP }) => (
         ))}
       </ul>
 
-      {/* Footer / Price */}
       <div className="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center">
         <div>
           <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">

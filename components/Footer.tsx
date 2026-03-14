@@ -161,12 +161,12 @@ export default function Footer() {
             <span className="text-slate-600 font-bold">Rahayu Trans</span>.
             Semua Hak Dilindungi.
           </p>
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-2 items-center">
             <span className="text-slate-400 text-xs font-medium">
-              Made From 🇮🇩 by:
+              Made From 🇮🇩 by :
             </span>
             <Link
-              className="text-slate-400 text-xs font-medium"
+              className="text-slate-600 text-xs font-semibold"
               href="https://www.bagian.web.id"
               target="_blank"
             >

@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FloatingWA from "@/components/FloatingWa";
 import Footer from "@/components/Footer";
+import WelcomeModal from "./WelcomeModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -124,7 +125,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow">
+          {children}
+          <WelcomeModal />
+        </main>
         <FloatingWA />
         <Footer />
         <GoogleAnalytics gaId="G-C291GLB68B" />

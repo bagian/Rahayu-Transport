@@ -20,9 +20,12 @@ import {
   CheckCircle2,
   Info,
   ChevronRight as ChevronSmall,
+  Car,
+  UsersRound,
+  UserRoundX,
 } from "lucide-react";
 
-// MUI Components & Dayjs (Ganti Adapter ke Dayjs agar sinkron dengan minDate)
+// MUI Components & Dayjs
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
@@ -57,7 +60,9 @@ export default function ArmadaDetail({
 
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
 
-  // PERBAIKAN: Gunakan tipe Dayjs | null agar tidak konflik dengan MobileDatePicker
+  // STATE BARU: Untuk Opsi Supir (Default: false / Lepas Kunci)
+  const [withDriver, setWithDriver] = useState<boolean>(false);
+
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
 
@@ -70,12 +75,13 @@ export default function ArmadaDetail({
 
   if (!vehicle) notFound();
 
+  // UPDATE PESAN WA
   const handleBooking = () => {
-    // Format tanggal menggunakan dayjs
     const start = startDate ? startDate.format("DD/MM/YYYY") : "-";
     const end = endDate ? endDate.format("DD/MM/YYYY") : "-";
+    const layanan = withDriver ? "Dengan Supir" : "Tanpa Supir";
 
-    const message = `Halo Rahayu Trans, saya ingin reservasi mobil:\n\nUnit: ${vehicle.name}\nMulai: ${start}\nSelesai: ${end}\n\nApakah unit tersedia?`;
+    const message = `Halo Rahayu Trans, saya ingin reservasi mobil:\n\nUnit: ${vehicle.name}\nLayanan: ${layanan}\nMulai: ${start}\nSelesai: ${end}\n\nApakah unit tersedia?`;
     window.open(
       `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`,
       "_blank",
@@ -86,35 +92,35 @@ export default function ArmadaDetail({
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="id">
       <div className="min-h-screen pb-20 selection:bg-red-100 pt-28">
         <nav className="sticky top-0 z-[60] border-b border-slate-100 h-16 flex items-center">
-          <div className="container mx-auto px-6 flex items-center justify-between">
+          <div className="container flex items-center justify-between px-6 mx-auto">
             <Link
               href="/armada"
-              className="flex items-center gap-2 text-slate-500 hover:text-red-600 transition-colors text-sm cursor-pointer"
+              className="flex items-center gap-2 text-sm transition-colors cursor-pointer text-slate-500 hover:text-red-600"
             >
               <ArrowLeft size={18} />
               <span className="font-medium">Kembali ke Katalog</span>
             </Link>
-            <div className="hidden md:flex items-center gap-2 text-slate-400 text-xs">
-              <Link href="/" className="hover:text-red-600 cursor-pointer">
+            <div className="items-center hidden gap-2 text-xs md:flex text-slate-400">
+              <Link href="/" className="cursor-pointer hover:text-red-600">
                 Home
               </Link>
               <ChevronSmall size={12} />
               <Link
                 href="/armada"
-                className="hover:text-red-600 cursor-pointer"
+                className="cursor-pointer hover:text-red-600"
               >
                 Armada
               </Link>
               <ChevronSmall size={12} />
-              <span className="text-slate-900 font-medium">{vehicle.name}</span>
+              <span className="font-medium text-slate-900">{vehicle.name}</span>
             </div>
           </div>
         </nav>
 
-        <main className="container mx-auto px-4 md:px-6 pt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-12">
+        <main className="container px-4 pt-8 mx-auto md:px-6">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 xl:gap-12">
             <div className="lg:col-span-7 xl:col-span-8">
-              {/* Gallery Swiper Section tetap sama */}
+              {/* Gallery Swiper Section */}
               <div className="relative group">
                 <div className="rounded-[1.5rem] overflow-hidden bg-white border border-slate-100 aspect-video relative shadow-sm">
                   <Swiper
@@ -128,7 +134,7 @@ export default function ArmadaDetail({
                           ? thumbsSwiper
                           : null,
                     }}
-                    className="h-full w-full"
+                    className="w-full h-full"
                   >
                     {vehicle.images.map((img, i) => (
                       <SwiperSlide key={`main-${i}`}>
@@ -145,10 +151,10 @@ export default function ArmadaDetail({
                       </SwiperSlide>
                     ))}
                   </Swiper>
-                  <button className="prev-v absolute left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-2xl bg-white/90 shadow-xl border border-slate-100/20 flex items-center justify-center text-slate-900 hover:bg-red-600 hover:text-white transition-all opacity-0 group-hover:opacity-100 cursor-pointer">
+                  <button className="absolute z-10 flex items-center justify-center w-12 h-12 transition-all -translate-y-1/2 border shadow-xl opacity-0 cursor-pointer prev-v left-6 top-1/2 rounded-2xl bg-white/90 border-slate-100/20 text-slate-900 hover:bg-red-600 hover:text-white group-hover:opacity-100">
                     <ChevronLeft size={24} />
                   </button>
-                  <button className="next-v absolute right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-2xl bg-white/90 shadow-xl border border-slate-100/20 flex items-center justify-center text-slate-900 hover:bg-red-600 hover:text-white transition-all opacity-0 group-hover:opacity-100 cursor-pointer">
+                  <button className="absolute z-10 flex items-center justify-center w-12 h-12 transition-all -translate-y-1/2 border shadow-xl opacity-0 cursor-pointer next-v right-6 top-1/2 rounded-2xl bg-white/90 border-slate-100/20 text-slate-900 hover:bg-red-600 hover:text-white group-hover:opacity-100">
                     <ChevronRight size={24} />
                   </button>
                 </div>
@@ -167,7 +173,7 @@ export default function ArmadaDetail({
                         key={`thumb-${i}`}
                         className="!w-18 !h-18 cursor-pointer"
                       >
-                        <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-transparent transition-all thumb-overlay">
+                        <div className="relative w-full h-full overflow-hidden transition-all border-2 border-transparent rounded-2xl thumb-overlay">
                           <Image
                             src={img}
                             alt="thumb"
@@ -186,11 +192,11 @@ export default function ArmadaDetail({
               <div className="mt-16">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-1 h-8 bg-red-600 rounded-full" />
-                  <h2 className="text-2xl font-semibold text-slate-900 tracking-tight text-slate-900">
+                  <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
                     Spesifikasi Kendaraan
                   </h2>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
                   {[
                     { icon: Zap, label: "Engine", val: vehicle.engine },
                     {
@@ -215,7 +221,7 @@ export default function ArmadaDetail({
                       key={i}
                       className="bg-white p-6 rounded-[1.5rem] border border-slate-200 flex flex-col items-center text-center group hover:border-red-200 transition-all cursor-default"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-red-50 group-hover:text-red-600 transition-colors mb-4">
+                      <div className="flex items-center justify-center w-12 h-12 mb-4 transition-colors rounded-2xl bg-slate-50 text-slate-400 group-hover:bg-red-50 group-hover:text-red-600">
                         <spec.icon size={22} />
                       </div>
                       <span className="text-[10px] text-slate-400 uppercase tracking-widest mb-1">
@@ -229,7 +235,6 @@ export default function ArmadaDetail({
                 </div>
               </div>
 
-              {/* Info Unit & Syarat tetap sama */}
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 p-10 bg-white rounded-[1.5rem] border border-slate-200">
                 {/* TENTANG UNIT */}
                 <section className="relative">
@@ -241,12 +246,12 @@ export default function ArmadaDetail({
                       Tentang Unit
                     </h3>
                   </div>
-                  <p className="text-slate-500 text-sm leading-relaxed antialiased">
+                  <p className="text-sm antialiased leading-relaxed text-slate-500">
                     {vehicle.description}
                   </p>
 
                   {/* Badge Keamanan Tambahan */}
-                  <div className="mt-8 flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
+                  <div className="flex items-center gap-4 p-4 mt-8 border border-dashed bg-slate-50 rounded-2xl border-slate-200">
                     <ShieldCheck
                       className="text-slate-400 shrink-0"
                       size={24}
@@ -273,19 +278,19 @@ export default function ArmadaDetail({
                       Fitur & Fasilitas
                     </h3>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-y-3 gap-x-6 font-medium">
+                  <div className="grid grid-cols-1 font-medium sm:grid-cols-2 md:grid-cols-2 gap-y-3 gap-x-6">
                     {vehicle.features.map((f, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-3 group p-2 rounded-lg hover:bg-slate-50 transition-colors cursor-default"
+                        className="flex items-center gap-3 p-2 transition-colors rounded-lg cursor-default group hover:bg-slate-50"
                       >
-                        <div className="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 group-hover:bg-red-600 transition-colors">
+                        <div className="flex items-center justify-center w-6 h-6 transition-colors bg-red-100 rounded-full group-hover:bg-red-600">
                           <CheckCircle2
                             size={14}
-                            className="text-red-600 group-hover:text-white transition-colors"
+                            className="text-red-600 transition-colors group-hover:text-white"
                           />
                         </div>
-                        <span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">
+                        <span className="text-sm transition-colors text-slate-600 group-hover:text-slate-900">
                           {f}
                         </span>
                       </div>
@@ -293,6 +298,7 @@ export default function ArmadaDetail({
                   </div>
                 </section>
               </div>
+
               <div className="mt-8 bg-white p-8 rounded-[1.5rem] border border-slate-200">
                 <div className="flex items-center gap-3 mb-6">
                   <Info className="text-red-600" size={22} />
@@ -300,7 +306,7 @@ export default function ArmadaDetail({
                     Ketentuan & Persyaratan Sewa
                   </h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   {[
                     {
                       title: "Identitas Diri",
@@ -320,7 +326,7 @@ export default function ArmadaDetail({
                     },
                     {
                       title: "Metode Sewa",
-                      desc: "Tersedia pilihan sistem Lepas Kunci (S&K berlaku) maupun dengan Supir profesional.",
+                      desc: "Tersedia pilihan dengan menggunakan supir maupun tanpa supir. Supir kami berpengalaman dengan kendaraan kami.",
                     },
                     {
                       title: "Kebijakan Durasi",
@@ -329,7 +335,7 @@ export default function ArmadaDetail({
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100 transition-all hover:bg-white hover:border-red-100"
+                      className="flex items-start gap-3 p-4 transition-all border bg-slate-50 rounded-2xl border-slate-100 hover:bg-white hover:border-red-100"
                     >
                       <CheckCircle2
                         size={18}
@@ -347,6 +353,7 @@ export default function ArmadaDetail({
                   ))}
                 </div>
               </div>
+
               <div className="mt-8 bg-white p-8 rounded-[1.5rem] border border-slate-200">
                 <div className="flex items-center gap-3 mb-6">
                   <ShieldCheck className="text-red-600" size={22} />
@@ -354,7 +361,7 @@ export default function ArmadaDetail({
                     Tanggung Jawab & Asuransi
                   </h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   {[
                     {
                       title: "Kecelakaan & Kerusakan",
@@ -375,7 +382,7 @@ export default function ArmadaDetail({
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100 transition-all hover:bg-white hover:border-red-100"
+                      className="flex items-start gap-3 p-4 transition-all border bg-slate-50 rounded-2xl border-slate-100 hover:bg-white hover:border-red-100"
                     >
                       <CheckCircle2
                         size={18}
@@ -393,7 +400,6 @@ export default function ArmadaDetail({
                   ))}
                 </div>
 
-                {/* Catatan Tambahan Kecil */}
                 <p className="mt-6 text-[10px] text-slate-400 italic text-center">
                   * Dengan menyewa, Anda dianggap telah menyetujui seluruh
                   syarat dan ketentuan yang berlaku di Rahayu Trans.
@@ -401,17 +407,17 @@ export default function ArmadaDetail({
               </div>
             </div>
 
-            {/* RIGHT SIDE: BOOKING CARD (Fokus Perbaikan DatePicker) */}
+            {/* RIGHT SIDE: BOOKING CARD */}
             <div className="lg:col-span-5 xl:col-span-4">
-              <div className="bg-white rounded-[1.5rem] p-8 md:p-10 border border-slate-200 shadow-2xl shadow-slate-200/50 sticky top-32">
+              <div className="bg-white rounded-[1.5rem] p-8 md:p-8 border border-slate-200 shadow-2xl shadow-slate-200/50 sticky top-24">
                 <div className="mb-8">
                   <span className="bg-red-50 text-red-600 px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest mb-4 inline-block">
                     Informasi Booking
                   </span>
-                  <h1 className="text-3xl font-semibold text-slate-900 mb-2 leading-tight">
+                  <h1 className="mb-2 text-2xl font-semibold leading-tight text-slate-900">
                     {vehicle.name}
                   </h1>
-                  <div className="flex items-center gap-4 text-slate-400 text-xs pt-4">
+                  <div className="flex items-center gap-4 pt-4 text-xs text-slate-400">
                     <div className="flex items-center gap-1">
                       <Users size={14} /> {vehicle.capacity} Kursi
                     </div>
@@ -426,22 +432,51 @@ export default function ArmadaDetail({
                     Harga Sewa / Hari
                   </p>
                   <div className="flex items-baseline gap-2 text-slate-900">
-                    <span className="text-4xl font-semibold text-slate-900">
+                    <span className="text-3xl font-semibold text-slate-900">
                       Rp {vehicle.pricePerDay.toLocaleString("id-ID")}
                     </span>
-                    <span className="text-slate-400 text-xs">/ Hari</span>
+                    <span className="text-xs text-slate-400">/ Hari</span>
                   </div>
                 </div>
 
-                <div className="space-y-4 mt-8">
-                  {/* DATEPICKER MULAI */}
+                <div className="mt-4 space-y-4">
+                  {/* PENAMBAHAN OPSI SUPIR DISINI */}
                   <div className="space-y-2">
+                    <label className="text-[10px] text-slate-400 uppercase tracking-widest ml-1">
+                      Opsi Layanan
+                    </label>
+                    <div className="flex bg-slate-100 p-1.5 rounded-2xl">
+                      <button
+                        onClick={() => setWithDriver(false)}
+                        className={`flex-1 py-3 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${
+                          !withDriver
+                            ? "bg-white text-slate-900 shadow-sm"
+                            : "text-slate-400 hover:text-slate-600 cursor-pointer"
+                        }`}
+                      >
+                        <UserRoundX size={16} /> Tanpa Supir
+                      </button>
+                      <button
+                        onClick={() => setWithDriver(true)}
+                        className={`flex-1 py-3 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${
+                          withDriver
+                            ? "bg-white text-slate-900 shadow-sm"
+                            : "text-slate-400 hover:text-slate-600 cursor-pointer"
+                        }`}
+                      >
+                        <UsersRound size={16} /> Dengan Supir
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* DATEPICKER MULAI */}
+                  <div className="mt-4 space-y-2">
                     <label className="text-[10px] text-slate-400 uppercase tracking-widest ml-1">
                       Mulai Perjalanan
                     </label>
                     <div className="relative w-full">
                       <CalendarDays
-                        className="absolute left-5 top-1/2 -translate-y-1/2 text-red-500 z-30 pointer-events-none"
+                        className="absolute z-30 text-red-500 -translate-y-1/2 pointer-events-none left-5 top-1/2"
                         size={20}
                       />
                       <MobileDatePicker
@@ -490,7 +525,7 @@ export default function ArmadaDetail({
                     </label>
                     <div className="relative w-full">
                       <CalendarDays
-                        className="absolute left-5 top-1/2 -translate-y-1/2 text-red-500 z-30 pointer-events-none"
+                        className="absolute z-30 text-red-500 -translate-y-1/2 pointer-events-none left-5 top-1/2"
                         size={20}
                       />
                       <MobileDatePicker
@@ -539,8 +574,7 @@ export default function ArmadaDetail({
                 >
                   <MessageSquare size={20} /> Booking Sekarang
                 </button>
-                {/* Bagian Bawah tetap sama */}
-                <div className="mt-6 flex flex-col gap-3">
+                <div className="flex flex-col gap-3 mt-6">
                   <Link
                     href="/contact"
                     className="text-center text-red-600 text-[10px] font-bold uppercase tracking-wider hover:underline cursor-pointer"

@@ -14,30 +14,30 @@ import "swiper/css/pagination";
 const slides = [
   {
     id: 1,
-    image: "/img/slider/promo-opening.png",
+    image: "/img/Sample.png",
   },
-  {
-    id: 2,
-    image: "/img/car/bus-interior-1.jpeg",
-  },
-  {
-    id: 3,
-    image: "/img/car/bus-interior-2.jpeg",
-  },
-  {
-    id: 4,
-    image: "/img/car/bus-pariwisata.jpeg",
-  },
-  {
-    id: 5,
-    image: "/img/car/minibus-pariwasata.jpeg",
-  },
+  // {
+  //   id: 2,
+  //   image: "/img/car/bus-interior-1.jpeg",
+  // },
+  // {
+  //   id: 3,
+  //   image: "/img/car/bus-interior-2.jpeg",
+  // },
+  // {
+  //   id: 4,
+  //   image: "/img/car/bus-pariwisata.jpeg",
+  // },
+  // {
+  //   id: 5,
+  //   image: "/img/car/minibus-pariwasata.jpeg",
+  // },
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[calc(50vh-80px)] md:h-[calc(100vh-80px)] min-h-[600px] pb-10 pt-32 max-w-[1440px] mx-auto lg:px-4 px-2">
-      <div className="relative w-full h-full overflow-hidden lg:rounded-[2.5rem] rounded-[1.5rem] shadow-2xl">
+    <section className="relative w-full max-w-[1440px] mx-auto lg:px-4 px-4 pt-32 pb-10">
+      <div className="relative w-full aspect-[16/10] md:aspect-[21/9] lg:rounded-[2.5rem] rounded-[1.5rem] shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Swiper
             modules={[Autoplay, EffectFade, Pagination]}

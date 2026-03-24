@@ -80,7 +80,7 @@ const WelcomeModal = () => {
             <div className="relative z-10 p-8 pt-10 text-left">
               <motion.div variants={itemVariants}>
                 <span className="inline-block px-3 py-1 mb-4 text-[10px] font-black tracking-widest text-red-600 uppercase bg-red-50 rounded-full border border-red-100">
-                  Promo Spesial
+                  Promo Spesial Grand Opening
                 </span>
               </motion.div>
 
@@ -112,6 +112,14 @@ const WelcomeModal = () => {
                   className="transition-transform group-hover:translate-x-1"
                 />
               </motion.button>
+              <motion.div
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                className="relative z-20 mt-8 text-center"
+              >
+                <p className="text-[10px] text-rose-600">
+                  *Syarat dan ketentuan berlaku!
+                </p>
+              </motion.div>
             </div>
           </motion.div>
         </motion.div>

@@ -2,29 +2,22 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Car } from "lucide-react";
+import { X, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const WelcomeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Mengecek apakah user sudah pernah melihat modal ini
-    const hasSeenModal = localStorage.getItem("rahayu_welcome_seen");
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 500);
 
-    if (!hasSeenModal) {
-      // Muncul setelah delay 500ms agar halaman dirender sempurna dulu
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
-    // Menyimpan data ke local storage agar tidak muncul lagi saat di-refresh
-    localStorage.setItem("rahayu_welcome_seen", "true");
   };
 
   const itemVariants = {

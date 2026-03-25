@@ -50,7 +50,7 @@ export default function HeroSection() {
             className="w-full h-full hero-swiper"
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id} className="bg-black">
+              <SwiperSlide key={slide.id} className="bg-white">
                 <Image
                   src={slide.image}
                   alt="Rental Mobil"

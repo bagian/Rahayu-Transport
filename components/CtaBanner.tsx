@@ -47,11 +47,12 @@ export default function CtaBanner() {
                   />
                 </button>
               </Link>
-
-              <button className="bg-white text-red-600 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl  hover:bg-red-50 transition-all flex items-center justify-center gap-3 cursor-pointer">
-                <MessageCircle size={20} />
-                Hubungi CS
-              </button>
+              <Link href="https://wa.me/6285784809074" className="contents">
+                <button className="bg-white text-red-600 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl  hover:bg-red-50 transition-all flex items-center justify-center gap-3 cursor-pointer">
+                  Hubungi CS
+                  <MessageCircle size={20} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>

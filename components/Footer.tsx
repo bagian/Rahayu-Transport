@@ -35,7 +35,7 @@ export default function Footer() {
       { name: "Antar Jemput Bandara", href: "/armada" },
     ],
     perusahaan: [
-      { name: "Tentang Kami", href: "/about" },
+      { name: "Tentang Kami", href: "/tentang-kami" },
       { name: "Syarat & Ketentuan", href: "/syarat-ketentuan" },
       { name: "Kebijakan Privasi", href: "/kebijakan-privasi" },
       { name: "Hubungi Kami", href: "/contact" },

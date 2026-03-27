@@ -15,20 +15,20 @@ export interface TravelAKDP {
 
 export const AKDP_DATA: TravelAKDP[] = [
   // --- SECTION: SURABAYA TO BONDOWOSO ---
+  // {
+  //   id: "sb-1",
+  //   name: "Travel Hiace Executive Pagi",
+  //   slug: "hiace-surabaya-bondowoso-pagi",
+  //   route: "Surabaya-Bondowoso",
+  //   type: "Executive",
+  //   price: 175000,
+  //   seats: 14,
+  //   departureTime: "06:00 WIB",
+  //   via: "Tol Probolinggo",
+  //   image: "/img/car/HIACE-PREMIO-SILVER.webp", // Sesuaikan dengan path gambarmu
+  // },
   {
     id: "sb-1",
-    name: "Travel Hiace Executive Pagi",
-    slug: "hiace-surabaya-bondowoso-pagi",
-    route: "Surabaya-Bondowoso",
-    type: "Executive",
-    price: 175000,
-    seats: 14,
-    departureTime: "06:00 WIB",
-    via: "Tol Probolinggo",
-    image: "/img/car/HIACE-PREMIO-SILVER.webp", // Sesuaikan dengan path gambarmu
-  },
-  {
-    id: "sb-2",
     name: "Travel Elf Long",
     slug: "elf-long-surabaya-bondowoso-malam",
     route: "Surabaya-Bondowoso",
@@ -41,20 +41,20 @@ export const AKDP_DATA: TravelAKDP[] = [
   },
 
   // --- SECTION: BONDOWOSO TO SURABAYA ---
+  // {
+  //   id: "bs-1",
+  //   name: "Travel Hiace Executive Pagi",
+  //   slug: "hiace-bondowoso-surabaya-pagi",
+  //   route: "Bondowoso-Surabaya",
+  //   type: "Executive",
+  //   price: 175000,
+  //   seats: 14,
+  //   departureTime: "05:00 WIB",
+  //   via: "Situbondo - Tol",
+  //   image: "/img/car/HIACE-PREMIO-SILVER.webp",
+  // },
   {
     id: "bs-1",
-    name: "Travel Hiace Executive Pagi",
-    slug: "hiace-bondowoso-surabaya-pagi",
-    route: "Bondowoso-Surabaya",
-    type: "Executive",
-    price: 175000,
-    seats: 14,
-    departureTime: "05:00 WIB",
-    via: "Situbondo - Tol",
-    image: "/img/car/HIACE-PREMIO-SILVER.webp",
-  },
-  {
-    id: "bs-2",
     name: "Travel Elf Long",
     slug: "elf-long-bondowoso-surabaya-sore",
     route: "Bondowoso-Surabaya",

@@ -17,7 +17,7 @@ const perks = [
     icon: <MapPin size={32} />,
   },
   {
-    title: "Harga Jujur",
+    title: "Harga Bersaing",
     desc: "Tanpa biaya tersembunyi. Harga yang tertera adalah harga final.",
     icon: <BadgePercent size={32} />,
   },

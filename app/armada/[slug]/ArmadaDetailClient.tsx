@@ -61,7 +61,7 @@ export default function ArmadaDetail({
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
 
   // STATE BARU: Untuk Opsi Supir (Default: false / Lepas Kunci)
-  const [withDriver, setWithDriver] = useState<boolean>(false);
+  const [withDriver, setWithDriver] = useState<boolean>(true);
 
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
@@ -83,7 +83,7 @@ export default function ArmadaDetail({
 
     const message = `Halo Rahayu Trans, saya ingin reservasi mobil:\n\nUnit: ${vehicle.name}\nLayanan: ${layanan}\nMulai: ${start}\nSelesai: ${end}\n\nApakah unit tersedia?`;
     window.open(
-      `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`,
+      `https://wa.me/6285784809074?text=${encodeURIComponent(message)}`,
       "_blank",
     );
   };
@@ -209,7 +209,7 @@ export default function ArmadaDetail({
                       label: "Bagasi",
                       val: `${vehicle.luggage} Koper`,
                     },
-                    { icon: Calendar, label: "Tahun", val: vehicle.year },
+                    // { icon: Calendar, label: "Tahun", val: vehicle.year },
                     { icon: Fuel, label: "Bahan Bakar", val: vehicle.fuelType },
                     {
                       icon: Settings2,
@@ -299,7 +299,7 @@ export default function ArmadaDetail({
                 </section>
               </div>
 
-              <div className="mt-8 bg-white p-8 rounded-[1.5rem] border border-slate-200">
+              {/* <div className="mt-8 bg-white p-8 rounded-[1.5rem] border border-slate-200">
                 <div className="flex items-center gap-3 mb-6">
                   <Info className="text-red-600" size={22} />
                   <h3 className="text-lg font-semibold text-slate-900">
@@ -352,9 +352,9 @@ export default function ArmadaDetail({
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
-              <div className="mt-8 bg-white p-8 rounded-[1.5rem] border border-slate-200">
+              {/* <div className="mt-8 bg-white p-8 rounded-[1.5rem] border border-slate-200">
                 <div className="flex items-center gap-3 mb-6">
                   <ShieldCheck className="text-red-600" size={22} />
                   <h3 className="text-lg font-semibold text-slate-900">
@@ -404,7 +404,7 @@ export default function ArmadaDetail({
                   * Dengan menyewa, Anda dianggap telah menyetujui seluruh
                   syarat dan ketentuan yang berlaku di Rahayu Trans.
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* RIGHT SIDE: BOOKING CARD */}
@@ -446,7 +446,7 @@ export default function ArmadaDetail({
                       Opsi Layanan
                     </label>
                     <div className="flex bg-slate-100 p-1.5 rounded-2xl">
-                      <button
+                      {/* <button
                         onClick={() => setWithDriver(false)}
                         className={`flex-1 py-3 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${
                           !withDriver
@@ -455,7 +455,7 @@ export default function ArmadaDetail({
                         }`}
                       >
                         <UserRoundX size={16} /> Tanpa Supir
-                      </button>
+                      </button> */}
                       <button
                         onClick={() => setWithDriver(true)}
                         className={`flex-1 py-3 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${

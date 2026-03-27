@@ -33,6 +33,7 @@ export default function Navbar() {
     { name: "Armada Kami", href: "/armada" },
     // {name: "Destinasi", href: "/destinasi"},
     { name: "Tentang Kami", href: "/tentang-kami" },
+    { name: "Galeri", href: '#' },
   ];
 
   return (

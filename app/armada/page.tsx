@@ -28,7 +28,7 @@ export default function FleetPage() {
             </h1>
             <p className="text-slate-500 mt-3 md:mt-4 text-base md:text-lg font-medium">
               Unit terbaru dan terawat untuk kenyamanan perjalanan Anda di
-              Sidoarjo dan sekitarnya.
+              Sidoarjo, Surabaya, Yogyakarta, Solo, Bandung, dan Bali.
             </p>
           </div>
         </div>

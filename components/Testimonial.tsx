@@ -99,18 +99,18 @@ export default function Testimonials() {
             <SwiperSlide key={rvw.id} className="!h-auto py-10">
               <div className="bg-white p-8 rounded-[20px] relative border border-slate-100 h-full flex flex-col justify-between shadow-sm hover:shadow-red-500/10 transition-shadow duration-500">
                 {/* Quote Icon disesuaikan ke Merah Muda */}
-                <Quote
+                {/* <Quote
                   className="absolute top-6 right-8 text-red-100"
                   size={40}
-                />
+                /> */}
 
                 <div>
                   {/* Rating Stars disesuaikan ke Merah */}
-                  <div className="flex gap-1 mb-4 text-red-500">
+                  {/* <div className="flex gap-1 mb-4 text-red-500">
                     {[...Array(rvw.rating)].map((_, i) => (
                       <Star key={i} size={14} fill="currentColor" />
                     ))}
-                  </div>
+                  </div> */}
                   <p className="text-slate-600 text-sm leading-relaxed mb-8">
                     &quot;{rvw.comment}&quot;
                   </p>

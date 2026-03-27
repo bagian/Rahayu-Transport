@@ -32,7 +32,7 @@ export default function Footer() {
       // { name: "Travel Surabaya, Bondowoso", href: "/armada" },
       { name: "Sewa Mobil + Driver", href: "/armada" },
       { name: "Sewa Bus & Elf", href: "/armada" },
-      { name: "Antar Jemput Bandara", href: "/armada" },
+      // { name: "Antar Jemput Bandara", href: "/armada" },
     ],
     perusahaan: [
       { name: "Tentang Kami", href: "/tentang-kami" },

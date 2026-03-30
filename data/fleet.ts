@@ -239,8 +239,8 @@ export const FLEET_DATA: Vehicle[] = [
     capacity: 19, // Unit minibis untuk rombongan
     pricePerDay: 1350000,
     images: [
-      "/img/car/Elf Long 19 Seat/WhatsApp Image 2026-03-11 at 10.10.28 (1).jpeg",
-      "/img/car/Elf Long 19 Seat/WhatsApp Image 2026-03-11 at 10.10.28 (2).jpeg",
+      "/img/car/ELF Long 19 Seat/WhatsApp Image 2026-03-11 at 10.10.28 (1).jpeg",
+      "/img/car/ELF Long 19 Seat/WhatsApp Image 2026-03-11 at 10.10.28 (2).jpeg",
     ],
     features: [
       "Full AC",

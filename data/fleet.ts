@@ -213,7 +213,7 @@ export const FLEET_DATA: Vehicle[] = [
     category: "MPV",
     transmission: "Automatic",
     capacity: 6, // Dilengkapi Captain Seat dengan Ottoman
-    pricePerDay: 0,
+    pricePerDay: 1750000,
     images: [
       "/img/car/Zenix Q Modelista/WhatsApp Image 2026-03-11 at 10.10.29.jpeg",
     ],

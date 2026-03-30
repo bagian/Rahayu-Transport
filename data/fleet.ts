@@ -93,7 +93,7 @@ export const FLEET_DATA: Vehicle[] = [
     category: "MPV",
     transmission: "Automatic", // Tersedia Manual, tapi unit sewa dominan Matic
     capacity: 7,
-    pricePerDay: 0,
+    pricePerDay: 1250000,
     images: [
       "/img/car/INNOVA REBORN/WhatsApp Image 2026-03-11 at 10.10.19.jpeg",
       "/img/car/INNOVA REBORN/WhatsApp Image 2026-03-11 at 10.09.48.jpeg",
@@ -118,7 +118,7 @@ export const FLEET_DATA: Vehicle[] = [
     category: "Premium",
     transmission: "Automatic",
     capacity: 6, // Captain Seat mewah
-    pricePerDay: 0,
+    pricePerDay: 2650000,
     images: [
       "/img/car/Toyota Alphard/WhatsApp Image 2026-03-11 at 10.10.18.jpeg",
     ],
@@ -141,7 +141,7 @@ export const FLEET_DATA: Vehicle[] = [
     category: "Premium",
     transmission: "Automatic",
     capacity: 6,
-    pricePerDay: 0,
+    pricePerDay: 3850000,
     images: [
       "/img/car/Toyota Alphard New 2025/WhatsApp Image 2026-03-11 at 10.10.39.jpeg",
       "/img/car/Toyota Alphard New 2025/WhatsApp Image 2026-03-11 at 10.10.32 (1).jpeg",
@@ -165,7 +165,7 @@ export const FLEET_DATA: Vehicle[] = [
     category: "MPV", // Bisa juga disebut Commercial/Van
     transmission: "Manual", // Mayoritas Premio di Indonesia adalah Manual
     capacity: 12,
-    pricePerDay: 0,
+    pricePerDay: 1500000,
     images: [
       "/img/car/Toyota Hiace Premio/WhatsApp Image 2026-03-12 at 11.22.49.jpeg",
       "/img/car/Toyota Hiace Premio/WhatsApp Image 2026-03-11 at 10.10.18 (1).jpeg",
@@ -190,7 +190,7 @@ export const FLEET_DATA: Vehicle[] = [
     category: "MPV",
     transmission: "Automatic",
     capacity: 7,
-    pricePerDay: 0,
+    pricePerDay: 1450000,
     images: [
       "/img/car/Zenix G Hybrid/WhatsApp Image 2026-03-11 at 10.10.28.jpeg",
     ],
@@ -209,7 +209,7 @@ export const FLEET_DATA: Vehicle[] = [
   {
     id: 6,
     slug: "zenix-q-modelista",
-    name: "Zenix Q Modellista",
+    name: "Zenix Q Modelista",
     category: "MPV",
     transmission: "Automatic",
     capacity: 6, // Dilengkapi Captain Seat dengan Ottoman
@@ -229,5 +229,29 @@ export const FLEET_DATA: Vehicle[] = [
     luggage: 4,
     isAvailable: true,
     description: "Varian tertinggi Zenix dengan fitur keselamatan lengkap dan tampilan sporty."
-  }
+  },
+  {
+    id: 7,
+    slug: "elf-long-19",
+    name: "Elf Long 19 Seats",
+    category: "MPV",
+    transmission: "Manual",
+    capacity: 19, // Unit minibis untuk rombongan
+    pricePerDay: 1350000,
+    images: [
+      "/img/car/Elf Long 19 Seat/WhatsApp Image 2026-03-11 at 10.10.28 (1).jpeg",
+      "/img/car/Elf Long 19 Seat/WhatsApp Image 2026-03-11 at 10.10.28 (2).jpeg",
+    ],
+    features: [
+      "Full AC",
+      "Karaoke",
+      "TV",
+    ],
+    year: "",
+    engine: "",
+    fuelType: "Diesel",
+    luggage: 0,
+    isAvailable: true,
+    description: "Minibus 19 kursi ideal untuk travel rombongan dan transportasi antar kota."
+  },
 ];

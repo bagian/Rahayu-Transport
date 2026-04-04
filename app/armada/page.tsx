@@ -34,7 +34,7 @@ export default function FleetPage() {
         </div>
 
         {/* Categories Filter - Aksen Merah */}
-        <div className="flex overflow-x-auto no-scrollbar pb-4 md:pb-0 md:flex-wrap gap-2 mb-8 md:mb-12">
+        {/* <div className="flex overflow-x-auto no-scrollbar pb-4 md:pb-0 md:flex-wrap gap-2 mb-8 md:mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -48,7 +48,7 @@ export default function FleetPage() {
               {cat}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Fleet Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-6">

@@ -131,7 +131,7 @@ export default function RootLayout({
         </main>
         <FloatingWA />
         <Footer />
-        <GoogleAnalytics gaId="G-C291GLB68B" />
+        <GoogleAnalytics gaId="G-J3NW2Z8D5C" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

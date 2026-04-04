@@ -13,6 +13,10 @@ const partnerLogos = [
     src: "/img/logo/cetakin-logo.png",
   },
   {
+    name: "Yellow Event",
+    src: "/img/logo/yellow-event-logo.png",
+  },
+  {
     name: "Jamkrindo",
     src: "/img/logo/jamkrindo-logo.png",
   },
@@ -39,6 +43,14 @@ const partnerLogos = [
   {
     name: "Pindad",
     src: "/img/logo/pindad-logo.png",
+  },
+  {
+    name: "Kabupaten Sidoarjo",
+    src: "/img/logo/sidoarjo-logo.png",
+  },
+  {
+    name: "Sulawesi Tenggara",
+    src: "/img/logo/sulawesi-tenggara-logo.png",
   },
 ];
 

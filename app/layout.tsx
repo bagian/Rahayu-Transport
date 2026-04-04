@@ -142,7 +142,7 @@ export default function RootLayout({
               image: "https://rahayutransport.web.id/og-image.jpg",
               "@id": "https://rahayutransport.web.id",
               url: "https://rahayutransport.web.id",
-              telephone: "+6281xxxxxxxx",
+              telephone: "+6285784809074",
               address: {
                 "@type": "PostalAddress",
                 streetAddress:

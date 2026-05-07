@@ -48,6 +48,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent;
 }
 
+/* Swiper Pagination Styles */
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.swiper-pagination {
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+}
+
 /* Menghilangkan garis border dan mengatur container utama */
 .custom-datepicker .MuiOutlinedInput-root {
   background-color: white !important;

@@ -65,7 +65,7 @@ const WelcomeModal = () => {
             </button>
 
             {/* Banner Image */}
-            <div className="relative h-[250px] md:h-[260px] w-full bg-slate-100 overflow-hidden">
+            <div className="relative h-[80px] md:h-[260px] w-full bg-slate-100 overflow-hidden">
               <Image
                 src="/img/slider/promo-opening.png"
                 alt="Welcome to Rahayu Transport"
@@ -79,21 +79,21 @@ const WelcomeModal = () => {
             {/* Konten Modal */}
             <div className="relative z-10 p-8 pt-10 text-left">
               <motion.div variants={itemVariants}>
-                <span className="inline-block px-3 py-1 mb-4 text-[10px] font-black tracking-widest text-red-600 uppercase bg-red-50 rounded-full border border-red-100">
+                <span className="inline-block px-3 py-1 mb-4 text-[8px] md:text-[10px] font-black tracking-widest text-red-600 uppercase bg-red-50 rounded-full border border-red-100">
                   Promo Spesial Grand Opening
                 </span>
               </motion.div>
 
               <motion.h2
                 variants={itemVariants}
-                className="relative z-20 mb-4 text-2xl font-black tracking-tight md:text-2xl text-slate-900"
+                className="relative z-20 mb-4 text-md font-black tracking-tight md:text-2xl text-slate-900"
               >
                 Perjalanan Nyaman Dimulai dari Sini
               </motion.h2>
 
               <motion.p
                 variants={itemVariants}
-                className="relative z-20 mb-8 text-sm leading-relaxed text-slate-500"
+                className="relative z-20 mb-8 text-[10px] md:text-sm leading-relaxed text-slate-500"
               >
                 Selamat datang di Rahayu Transport. Kami siap melayani kebutuhan
                 transportasi Anda di Kota Surabaya, Yogyakarta, Bandung, Bali,
@@ -104,7 +104,7 @@ const WelcomeModal = () => {
               <motion.button
                 variants={itemVariants}
                 onClick={handleClose}
-                className="group relative z-30 w-full py-4 bg-red-600 text-white rounded-xl text-sm font-bold tracking-wide flex items-center justify-center gap-3 hover:bg-red-700 transition-all active:scale-[0.98] shadow-xl shadow-red-200 cursor-pointer"
+                className="group relative z-30 w-full py-2 bg-red-600 text-white rounded-xl text-[10px] md:text-sm font-bold tracking-wide flex items-center justify-center gap-3 hover:bg-red-700 transition-all active:scale-[0.98] shadow-xl shadow-red-200 cursor-pointer"
               >
                 Lihat Armada Kami
                 <ArrowRight

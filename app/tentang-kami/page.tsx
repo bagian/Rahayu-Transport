@@ -13,15 +13,16 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import AboutHeroSlider from "@/components/AboutHeroSlider";
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<"visi" | "misi">("misi");
 
   const stats = [
     { label: "Armada Tersedia", val: "50+", sub: "Unit Terawat" },
-    { label: "Pelanggan Puas", val: "1K+", sub: "Telah Dilayani" },
-    { label: "Agen Profesional", val: "100+", sub: "Driver Terlatih" },
-    { label: "Tingkat Kepuasan", val: "95%", sub: "Rating Bintang 5" },
+    { label: "Pelanggan Puas", val: "500+", sub: "Telah Dilayani" },
+    { label: "Agen Profesional", val: "50+", sub: "Driver Terlatih" },
+    { label: "Tingkat Kepuasan", val: "90%", sub: "Rating Bintang 5" },
   ];
 
   return (
@@ -31,46 +32,34 @@ export default function AboutPage() {
         <section className="mt-24 pb-16 lg:mt-32 lg:pb-24">
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8 border-b border-slate-100 pb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.1] max-w-2xl">
-              Mewujudkan Perjalanan <br />
+              Rahayu Transport <br />
               <span className="italic font-light text-red-600">
-                Nyaman Jadi Nyata.
+                Melayani Perjalanan Anda Dengan Sepenuh Hati.
               </span>
             </h1>
             <p className="max-w-md text-slate-500 text-sm md:text-base leading-relaxed mt-4">
-              Merevolusi cara Anda menyewa kendaraan dengan kepercayaan,
-              teknologi terbaru, dan transparansi di wilayah Sidoarjo dan
-              Surabaya.
+              Layanan transportasi dengan memberikan pelayanan yang tak terlupakan di setiap perjalanan anda.
+              Memfokuskan kepercayaan customer dengan pelayanan terbaik kami dan pengalaman perjalanan yang tak akan terlupakan.
+              Kami berada di beberapa kota di Jawa Timur seperti Sidoarjo, Surabaya dan Bondowoso yang akan masih dikembangkan di beberapa provinsi lainnya.
             </p>
           </div>
         </section>
 
-        {/* 2. MAIN VISUAL */}
-        <section className="mb-16 md:mb-24">
-          <div className="relative aspect-video w-full h-[480px] md:h-[750px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl group">
-            <Image
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1600"
-              alt="Luxury Fleet Experience"
-              fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              priority
-              quality={100}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-          </div>
-        </section>
+        {/* 2. MAIN VISUAL - SWIPER SLIDER */}
+        <AboutHeroSlider />
         {/* 3. NARRATIVE & STATS SECTION (Bawah Banner) */}
         <section className="pb-24">
           {/* Deskripsi Narasi Responsif */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-20 text-left">
+          <div className="flex flex-col lg:flex-row justify-center mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 max-w-lg leading-tight">
-              Membentuk Masa Depan <br className="hidden md:block" />{" "}
-              Transportasi Inovatif.
+              Hasil Layanan Kami. <br className="hidden md:block" />{" "}
+              {/* Transportasi Inovatif. */}
             </h2>
-            <p className="max-w-md text-slate-500 text-sm md:text-base leading-relaxed">
+            {/* <p className="max-w-md text-slate-500 text-sm md:text-base leading-relaxed">
               Kami mendefinisikan ulang standar penyewaan mobil di Jawa Timur
               melalui keunggulan layanan harian dan bulanan yang mulus bagi
               setiap pelanggan.
-            </p>
+            </p> */}
           </div>
 
           {/* Stats Grid - Clean & Responsive */}
@@ -108,21 +97,19 @@ export default function AboutPage() {
             <div className="flex bg-slate-50 p-1 rounded-full mb-10 w-fit border border-slate-100 mx-auto lg:mx-0">
               <button
                 onClick={() => setActiveTab("visi")}
-                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[10px] md:text-xs font-bold transition-all cursor-pointer ${
-                  activeTab === "visi"
-                    ? "bg-red-600 text-white shadow-md"
-                    : "text-slate-400"
-                }`}
+                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[10px] md:text-xs font-bold transition-all cursor-pointer ${activeTab === "visi"
+                  ? "bg-red-600 text-white shadow-md"
+                  : "text-slate-400"
+                  }`}
               >
                 <Eye size={14} className="md:w-4 md:h-4" /> Visi Kami
               </button>
               <button
                 onClick={() => setActiveTab("misi")}
-                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[10px] md:text-xs font-bold transition-all cursor-pointer ${
-                  activeTab === "misi"
-                    ? "bg-red-600 text-white shadow-md"
-                    : "text-slate-400"
-                }`}
+                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[10px] md:text-xs font-bold transition-all cursor-pointer ${activeTab === "misi"
+                  ? "bg-red-600 text-white shadow-md"
+                  : "text-slate-400"
+                  }`}
               >
                 <Target size={14} className="md:w-4 md:h-4" /> Misi Kami
               </button>
@@ -254,11 +241,11 @@ export default function AboutPage() {
                 />
               </div>
               {/* <div className="absolute -bottom-4 -right-2 md:-bottom-0 md:-right-1 bg-red-600 text-white p-6 md:p-8 rounded-[24px] md:rounded-[30px] shadow-2xl">
-                <p className="text-2xl md:text-3xl font-black italic">10Y+</p>
-                <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest">
-                  Experience
-                </p>
-              </div> */}
+<p className="text-2xl md:text-3xl font-black italic">10Y+</p>
+<p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest">
+Experience
+</p>
+</div> */}
             </div>
           </div>
         </section>

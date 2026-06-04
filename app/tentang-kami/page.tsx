@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8 border-b border-slate-100 pb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.1] max-w-2xl">
               Rahayu Transport <br />
-              <span className="italic font-light text-red-600">
+              <span className="italic font-light text-red-600 text-3xl">
                 Melayani Perjalanan Anda Dengan Sepenuh Hati.
               </span>
             </h1>
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
           {/* Stats Grid - Clean & Responsive */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 py-12 border-y border-slate-100">
-          {stats.map((stat, i) => (
+            {stats.map((stat, i) => (
               <div key={i} className="text-center lg:text-left">
                 <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-2">
                   <StatCounter value={stat.val} duration={1800} />

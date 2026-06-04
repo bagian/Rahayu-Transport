@@ -132,10 +132,10 @@ export default function ImageModal({
                 key={activeMedia.src}
                 poster={activeMedia.poster}
                 className="absolute inset-0 w-full h-full object-contain"
-                controls
                 autoPlay
                 muted
                 playsInline
+                loop
               >
                 <source src={activeMedia.src} type="video/mp4" />
                 Browser Anda tidak mendukung tag video.

@@ -126,7 +126,7 @@ export default function FleetPage() {
                       Sewa Per Hari
                     </span>
                     <p className="text-xl font-black text-slate-900">
-                      Rp {(vehicle.pricePerDay / 1000).toLocaleString("id-ID")}k
+                      Rp {vehicle.pricePerDay.toLocaleString("id-ID")}
                       <span className="text-xs font-medium text-slate-400 ml-1">
                         /hari
                       </span>

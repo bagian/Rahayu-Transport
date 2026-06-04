@@ -32,7 +32,7 @@ const WelcomeModal = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4 "
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ const WelcomeModal = () => {
               y: 10,
               transition: { ease: "easeIn", duration: 0.2 },
             }}
-            className="relative w-full max-w-lg overflow-hidden bg-white shadow-2xl rounded-2xl"
+            className="relative w-full overflow-hidden bg-white shadow-2xl rounded-2xl max-w-[300px] md:max-w-lg"
           >
             {/* Tombol Close */}
             <button
@@ -65,7 +65,7 @@ const WelcomeModal = () => {
             </button>
 
             {/* Banner Image */}
-            <div className="relative h-[80px] md:h-[260px] w-full bg-slate-100 overflow-hidden">
+            <div className="relative h-[180px] md:h-[260px] w-full bg-slate-100 overflow-hidden">
               <Image
                 src="/img/slider/promo-opening.png"
                 alt="Welcome to Rahayu Transport"
@@ -73,11 +73,11 @@ const WelcomeModal = () => {
                 priority
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-[1]"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-[1]"></div> */}
             </div>
 
             {/* Konten Modal */}
-            <div className="relative z-10 p-8 pt-10 text-left">
+            <div className="relative z-10 p-6 pt-4 text-left">
               <motion.div variants={itemVariants}>
                 <span className="inline-block px-3 py-1 mb-4 text-[8px] md:text-[10px] font-black tracking-widest text-red-600 uppercase bg-red-50 rounded-full border border-red-100">
                   Promo Spesial Grand Opening
@@ -86,14 +86,14 @@ const WelcomeModal = () => {
 
               <motion.h2
                 variants={itemVariants}
-                className="relative z-20 mb-4 text-md font-black tracking-tight md:text-2xl text-slate-900"
+                className="relative z-20 mb-3 text-md font-black tracking-tight md:text-2xl text-slate-900"
               >
                 Perjalanan Nyaman Dimulai dari Sini
               </motion.h2>
 
               <motion.p
                 variants={itemVariants}
-                className="relative z-20 mb-8 text-[10px] md:text-sm leading-relaxed text-slate-500"
+                className="relative z-20 mb-3 text-[12px] md:text-sm leading-relaxed text-slate-500"
               >
                 Selamat datang di Rahayu Transport. Kami siap melayani kebutuhan
                 transportasi Anda di Kota Surabaya, Yogyakarta, Bandung, Bali,
@@ -104,7 +104,7 @@ const WelcomeModal = () => {
               <motion.button
                 variants={itemVariants}
                 onClick={handleClose}
-                className="group relative z-30 w-full py-2 bg-red-600 text-white rounded-xl text-[10px] md:text-sm font-bold tracking-wide flex items-center justify-center gap-3 hover:bg-red-700 transition-all active:scale-[0.98] shadow-xl shadow-red-200 cursor-pointer"
+                className="group relative z-30 w-full py-2 bg-red-600 text-white rounded-xl text-[11px] md:text-sm font-bold tracking-wide flex items-center justify-center gap-3 hover:bg-red-700 transition-all active:scale-[0.98] shadow-xl shadow-red-200 cursor-pointer"
               >
                 Lihat Armada Kami
                 <ArrowRight

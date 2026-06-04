@@ -18,49 +18,35 @@ export interface GalleryItem {
 export const GALLERY_DATA: GalleryItem[] = [
   {
     id: 1,
-    category: "perjalanan",
-    title: "Perjalanan Nyaman Lintas Jawa",
+    category: "armada",
+    title: "Zenix V Hybrid Modelista",
     description: "Nikmati perjalanan yang aman dan menyenangkan melintasi kota-kota di Jawa Timur dengan armada terawat kami.",
     media: [
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=B0enveZcdjc",
-        poster: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200",
+        src: "/video/Zenix-V-Hybrid-Modelista.mp4",
+        poster: "/img/car/ZENIX_V_HYBRID_MODELISTA/Zenix_V_Hybrid_Modelista_1.jpg",
         alt: "Perjalanan di jalan tol saat senja"
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200",
-        alt: "Armada Bus Modern"
+        src: "/img/car/ZENIX_V_HYBRID_MODELISTA/ZENIX_V_HYBRID_MODELISTA_1.jpg",
+        alt: "ZENIX V HYBRID MODELISTA"
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=1200",
-        alt: "Pemandangan dari jendela kendaraan"
+        src: "/img/car/ZENIX_V_HYBRID_MODELISTA/ZENIX_V_HYBRID_MODELISTA_2.jpg",
+        alt: "ZENIX V HYBRID MODELISTA"
+      },
+      {
+        type: "image",
+        src: "/img/car/ZENIX_V_HYBRID_MODELISTA/ZENIX_V_HYBRID_MODELISTA_3.jpg",
+        alt: "ZENIX V HYBRID MODELISTA"
       }
     ]
   },
   {
     id: 2,
-    category: "armada",
-    title: "Perawatan Berkala & Uji Kelayakan",
-    description: "Kami berkomitmen untuk melakukan pemeriksaan rutin sebelum armada berangkat demi keamanan perjalanan Anda.",
-    media: [
-      {
-        type: "video",
-        src: "https://assets.mixkit.co/videos/preview/mixkit-cars-on-a-highway-at-night-40899-large.mp4",
-        poster: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1200",
-        alt: "Armada siap berangkat"
-      },
-      {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200",
-        alt: "Proses pemeliharaan berkala"
-      }
-    ]
-  },
-  {
-    id: 3,
     category: "armada",
     title: "Innova Reborn",
     description: "Medium MPV legendaris yang tangguh dan nyaman untuk segala medan.",
@@ -83,7 +69,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     category: "armada",
     title: "Toyota Alphard",
     description: "Standar kemewahan untuk tamu VIP dan perjalanan bisnis.",
@@ -96,7 +82,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     ]
   },
   {
-    id: 5,
+    id: 4,
     category: "armada",
     title: "Toyota Alphard New 2025",
     description: "Generasi terbaru Alphard dengan desain lebih futuristik dan kenyamanan maksimal.",
@@ -114,7 +100,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     ]
   },
   {
-    id: 6,
+    id: 5,
     category: "armada",
     title: "Toyota Hiace Premio",
     description: "Solusi transportasi grup dengan kapasitas besar dan tampilan eksklusif.",
@@ -137,7 +123,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     ]
   },
   {
-    id: 7,
+    id: 6,
     category: "armada",
     title: "Zenix G Hybrid",
     description: "MPV modern yang sangat irit bahan bakar dan ramah lingkungan.",
@@ -150,7 +136,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     category: "armada",
     title: "Zenix Q Modelista",
     description: "Varian tertinggi Zenix dengan fitur keselamatan lengkap dan tampilan sporty.",
@@ -163,7 +149,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     ]
   },
   {
-    id: 9,
+    id: 8,
     category: "armada",
     title: "Elf Long 19 Seats",
     description: "Minibus 19 kursi ideal untuk travel rombongan dan transportasi antar kota.",

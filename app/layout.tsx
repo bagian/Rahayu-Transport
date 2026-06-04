@@ -127,7 +127,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">
           {children}
-          <WelcomeModal />
+          {/* <WelcomeModal /> */}
         </main>
         <FloatingWA />
         <Footer />

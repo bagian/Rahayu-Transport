@@ -14,6 +14,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import AboutHeroSlider from "@/components/AboutHeroSlider";
+import StatCounter from "@/components/StatCounter";
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<"visi" | "misi">("misi");
@@ -64,10 +65,10 @@ export default function AboutPage() {
 
           {/* Stats Grid - Clean & Responsive */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 py-12 border-y border-slate-100">
-            {stats.map((stat, i) => (
+          {stats.map((stat, i) => (
               <div key={i} className="text-center lg:text-left">
                 <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-2">
-                  {stat.val}
+                  <StatCounter value={stat.val} duration={1800} />
                 </h3>
                 <p className="text-[10px] md:text-xs font-bold text-slate-900 uppercase tracking-widest mb-1">
                   {stat.label}
@@ -134,7 +135,7 @@ export default function AboutPage() {
                   <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
                     Inovasi Pelayanan demi <br /> Kepuasan Mutlak Anda.
                   </h2>
-                  <div className="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
+                  <div className="text-slate-500 text-sm md:text-base leading-relaxed mb-8 text-left">
                     <ul className="list-decimal list-outside pl-5 space-y-3 marker:text-red-600 marker:font-bold">
                       <li className="pl-2">
                         Memberikan solusi perjalanan yang personal, aman, dan
